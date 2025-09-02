@@ -50,7 +50,7 @@ const Header = () => {
         </a>
 
        <a
-  href="/Seif_Eldin_CV.pdf"
+  href="/Seif_Aldin_Frontend-react,next_CV.pdf"
   download
   target="_blank"
   rel="noopener noreferrer"
