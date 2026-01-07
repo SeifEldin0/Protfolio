@@ -4,7 +4,6 @@
   "env": {
     "NEXT_PUBLIC_SITE_URL": "@next_public_site_url"
   },
-  "envPrefix": "NEXT_",
   "functions": {
     "api/**": {
       "memory": 1024,
