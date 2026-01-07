@@ -16,8 +16,19 @@ const nextConfig = {
 	},
 	headers: async () => {
 		return [
+			// Don't cache SEO-critical files so updates are seen immediately
 			{
-				source: "/:path*",
+				source: "/(sitemap.xml|sitemap-0.xml|robots.txt)",
+				headers: [
+					{
+						key: "Cache-Control",
+						value: "no-cache, no-store, must-revalidate",
+					},
+				],
+			},
+			// Long cache for static assets only
+			{
+				source: "/:path*\.(js|css|woff2|woff|ttf|eot|png|jpg|jpeg|gif|svg|ico|webp|avif)",
 				headers: [
 					{
 						key: "Cache-Control",
