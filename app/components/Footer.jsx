@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-6 border-t">
+    <footer className="bg-white/80 backdrop-blur py-6 border-t">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Logo */}
         <div className="flex justify-center mb-2">
@@ -41,7 +41,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/saif-eldin-mostafa-654585316"
-              className="text-gray-600 hover:text-black transition"
+              className="text-gray-600 hover:text-amber-600 transition"
             >
               LinkedIn
             </a>
@@ -51,7 +51,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/SeifEldin0"
-              className="text-gray-600 hover:text-black transition"
+              className="text-gray-600 hover:text-amber-600 transition"
             >
               GitHub
             </a>
@@ -61,7 +61,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.instagram.com/saif_mostafa_/"
-              className="text-gray-600 hover:text-black transition"
+              className="text-gray-600 hover:text-amber-600 transition"
             >
               Instagram
             </a>

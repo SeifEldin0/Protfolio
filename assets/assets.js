@@ -1,4 +1,4 @@
-import user_image from "./user-image.png";
+import user_image from "./user-image.jpg";
 import code_icon from "./code-icon.png";
 import code_icon_dark from "./code-icon-dark.png";
 import edu_icon from "./edu-icon.png";
@@ -15,7 +15,7 @@ import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
-import profile_img from "./profile-img.png";
+import profile_img from "./profile-img.jpg";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
@@ -80,22 +80,22 @@ export const workData = [
   {
     title: "E-commerce",
     description: "E-commerce website using vite React Js",
-    bgImage: "/pro/assets/public/E-commerce.png",
+    bgImage: "/E-commerce.png",
   },
   {
     title: "Wheather App",
     description: "Wheather App using next Js",
-    bgImage: "/pro/assets/public/Weather app.png",
+    bgImage: "/Weatherapp_icon.png",
   },
   {
     title: "Prayer Time",
     description: "Prayer Time website using vite React Js",
-    bgImage: "/pro/assets/public/prayr time.png",
+    bgImage: "/prayrtime_icon.png",
   },
   {
     title: "integration with gamini ai",
     description: "integration with gamini ai using React Js",
-    bgImage: "/pro/assets/public/integration Api.png",
+    bgImage: "/integration%20Api.png",
   },
 ];
 
@@ -103,6 +103,7 @@ export const serviceData = [
   {
     icon: assets.commerce_icon,
     title: "E-commerce",
+    image: "/E-commerce.png",
     description:
       "Fully responsive online store with product display, cart functionality, and smooth user interface.",
     link: "https://e-commerce-project-hq65-git-main-seifeldin0s-projects.vercel.app",
@@ -110,6 +111,7 @@ export const serviceData = [
   {
     icon: assets.integration_icon,
     title: "Integration with AI",
+    image: "/integration%20Api.png",
     description:
       "Implemented an AI-powered chatbot using Gemini API to generate answers dynamically based on user input.",
     link: "https://ai-liard-kappa.vercel.app/",
@@ -117,6 +119,7 @@ export const serviceData = [
   {
     icon: assets.prayrtime_icon,
     title: "Prayer Time App",
+    image: "/prayrtime_icon.png",
     description:
       "Displays accurate prayer times using real-time API with a countdown timer and responsive design.",
     link: "https://prayer-time-tau.vercel.app/",
@@ -124,6 +127,7 @@ export const serviceData = [
   {
     icon: assets.Weatherapp_icon,
     title: "Weather App",
+    image: "/Weatherapp_icon.png",
     description:
       "Built with weather API to show live weather updates by city, including temperature, humidity, and icon.",
     link: "https://weather-app-six-weld-42.vercel.app/",
@@ -134,21 +138,23 @@ export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js",
+    title: "Tech Stack",
+    description:
+      "React.js, Next.js, JavaScript, TypeScript, Laravel (PHP), MySQL, Nuxt.js, Vue.js, Tailwind, MUI",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
     description:
-      "College of English Law• Front-End Diploma  Amit Learning Center",
+      "Bachelor of Law — Beni Suef University (2026) • Full-Stack Diploma — Amit Learning Academy (2024) • Udemy Courses (Vue.js, Nuxt.js)",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Projects",
-    description: "Built more than 5 projects",
+    description:
+      "Developed 10+ real-world projects including E-Commerce, ERP Dashboards, and Web Apps",
   },
 ];
 

@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -37,26 +39,38 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full px-[12%] py-20 scroll-mt-20 bg-gray-50">
-      <h4 className="text-center mb-2 text-lg font-Ovo text-gray-500">
-        Contact Us
-      </h4>
-      <h2 className="text-center text-5xl font-Ovo mb-10">Get in Touch</h2>
-      <p className="text-center max-w-xl mx-auto text-gray-600 mb-10">
-        Feel free to reach out if you have any questions or would like to
-        collaborate on a project.
-      </p>
+    <div id="contact" className="w-full px-[12%] py-20 scroll-mt-20 bg-white">
+      <Reveal>
+        <h4 className="text-center mb-2 text-lg font-Ovo text-gray-500">Contact Us</h4>
+      </Reveal>
+      <Reveal delay={0.1}>
+        <h2 className="text-center text-5xl font-Ovo mb-10">Get in Touch</h2>
+      </Reveal>
+      <Reveal delay={0.2}>
+        <p className="text-center max-w-xl mx-auto text-gray-600 mb-10">
+          Feel free to reach out if you have any questions or would like to
+          collaborate on a project.
+        </p>
+      </Reveal>
 
-      <form onSubmit={onSubmit} className="max-w-2xl mx-auto space-y-4">
+      <motion.form
+        onSubmit={onSubmit}
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-2xl mx-auto space-y-4 bg-white/80 backdrop-blur p-6 rounded-2xl shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input
+          <motion.input
+            whileFocus={{ scale: 1.01 }}
             name="Name"
             type="text"
             placeholder="Enter your name"
             required
             className="w-full p-3 border border-gray-300 rounded-md bg-white"
           />
-          <input
+          <motion.input
+            whileFocus={{ scale: 1.01 }}
             name="Email"
             type="email"
             placeholder="Enter your email"
@@ -64,20 +78,23 @@ const Contact = () => {
             className="w-full p-3 border border-gray-300 rounded-md bg-white"
           />
         </div>
-        <textarea
+        <motion.textarea
+          whileFocus={{ scale: 1.01 }}
           name="Message"
           placeholder="Enter your message"
           rows="6"
           required
           className="w-full p-3 border border-gray-300 rounded-md bg-white"
-        ></textarea>
-        <button
+        ></motion.textarea>
+        <motion.button
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
           type="submit"
-          className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded transition"
+          className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded transition"
         >
           Send Message
-        </button>
-      </form>
+        </motion.button>
+      </motion.form>
       <p className="mt-4 text-center text-sm text-gray-600">{result}</p>
     </div>
   );

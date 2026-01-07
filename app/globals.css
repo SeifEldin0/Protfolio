@@ -3,8 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-font-family: Outfit;
-
+* {
+  font-family: Outfit;
 }
 
+
+/* Modern background and subtle pattern */
+html, body { height: 100%; }
+body {
+  background: radial-gradient(1200px 600px at 10% -10%, #fff3d1 0%, transparent 60%),
+              radial-gradient(800px 400px at 90% -20%, #ffd9e6 0%, transparent 60%),
+              linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  color: #111827;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Smooth float animation utility */
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(0); }
+}
+.float-slow { animation: floatSlow 7s ease-in-out infinite; }
