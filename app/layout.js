@@ -18,7 +18,7 @@ export const metadata = {
   viewport: {
     width: "device-width",
     initialScale: 1,
-    maximumScale: 1,
+    maximumScale: 5,
   },
   title: {
     default: "Seif El-Din | Full-Stack Developer",
@@ -45,6 +45,20 @@ export const metadata = {
     "web developer",
   ],
   authors: [{ name: "Seif El-Din", url: siteUrl }],
+  creator: "Seif El-Din",
+  publisher: "Seif El-Din",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: {
     canonical: "/",
   },
@@ -81,7 +95,15 @@ export default function RootLayout({ children }) {
     name: "Seif El-Din",
     alternateName: "سيف الدين",
     url: siteUrl,
+    image: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/E-commerce.png`,
+      width: 1200,
+      height: 630,
+    },
     jobTitle: "Full-Stack Web Developer",
+    email: "contact@example.com",
+    telephone: "+20",
     sameAs: [
       "https://www.linkedin.com/in/saif-eldin-mostafa-654585316",
       "https://github.com/SeifEldin0",
@@ -90,7 +112,23 @@ export default function RootLayout({ children }) {
       "@type": "Organization",
       name: "Freelance",
     },
-    knowsAbout: ["React", "Next.js", "Laravel", "REST APIs", "MySQL"],
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "Laravel",
+      "PHP",
+      "REST APIs",
+      "MySQL",
+      "Web Development",
+      "Frontend Development",
+      "Backend Development",
+    ],
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Software Development",
+    },
   };
 
   return (
