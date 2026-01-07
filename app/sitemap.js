@@ -7,8 +7,8 @@ export default function sitemap() {
     {
       url: `${siteUrl}/`,
       lastModified,
-      changefreq: "weekly",
-      priority: 1,
+      changeFrequency: "weekly",
+      priority: 1.0,
     },
   ];
 }
