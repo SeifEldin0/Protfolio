@@ -1,9 +1,6 @@
 {
   "buildCommand": "next build",
   "installCommand": "npm ci",
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": "@next_public_site_url"
-  },
   "functions": {
     "api/**": {
       "memory": 1024,
