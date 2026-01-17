@@ -1,16 +1,39 @@
 "use client";
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Reveal({ children, delay = 0, y = 12, className }) {
+gsap.registerPlugin(ScrollTrigger);
+
+export default function Reveal({ children, delay = 0, y = 30, className = "" }) {
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        elementRef.current,
+        { y, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          delay,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: elementRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, elementRef);
+
+    return () => ctx.revert();
+  }, [delay, y]);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, delay }}
-      className={className}
-    >
+    <div ref={elementRef} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }

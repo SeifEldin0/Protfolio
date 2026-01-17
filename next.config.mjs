@@ -3,7 +3,6 @@ const nextConfig = {
 	reactStrictMode: true,
 	poweredByHeader: false,
 	compress: true,
-	swcMinify: true,
 	productionBrowserSourceMaps: false,
 	images: {
 		formats: ["image/avif", "image/webp"],
@@ -12,7 +11,7 @@ const nextConfig = {
 		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 	},
 	experimental: {
-		optimizePackageImports: ["@mui/material", "@mui/icons-material", "framer-motion"],
+		optimizePackageImports: ["@mui/material", "@mui/icons-material", "framer-motion", "gsap"],
 	},
 	headers: async () => {
 		return [
