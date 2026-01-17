@@ -71,7 +71,9 @@ const About = () => {
 
   const skills = [
     "React.js", "Next.js", "Laravel", "TypeScript",
-    "Vue.js", "MySQL", "Tailwind", "REST APIs"
+    "Vue.js", "MySQL", "Tailwind", "REST APIs",
+    "Git/GitHub", "Docker", "CI/CD", "Jest",
+    "Vercel", "AWS", "Linux", "Agile/Scrum"
   ];
 
   const services = [
@@ -104,6 +106,36 @@ const About = () => {
       title: "Full-Stack",
       description: "End-to-end apps with clean architecture",
       color: "from-emerald-500 to-teal-500"
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      title: "Testing & QA",
+      description: "Unit, integration & E2E testing with Jest & Cypress",
+      color: "from-violet-500 to-purple-500"
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+        </svg>
+      ),
+      title: "Deployment",
+      description: "CI/CD pipelines, Docker & cloud deployment on AWS/Vercel",
+      color: "from-sky-500 to-blue-500"
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      title: "Performance",
+      description: "Optimization, SEO & accessibility best practices",
+      color: "from-amber-500 to-orange-500"
     }
   ];
 
@@ -162,17 +194,32 @@ const About = () => {
           {/* Text Column */}
           <div ref={contentRef} className="about-content">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
-              Hi, I'm <span className="text-gradient">Seif Aldin</span>
+              Hi, I'm <span className="text-gradient">Seif Al Din Mostafa</span>
             </h3>
             
             <p className="text-base text-white/60 leading-relaxed mb-4">
-              A passionate Full-Stack Developer dedicated to creating exceptional 
-              digital experiences. I transform complex problems into elegant solutions.
+              Full-Stack Web Developer with proven experience delivering scalable, 
+              high-performance, and user-centric web applications using React.js, 
+              Next.js, Vue.js, Nuxt.js, Laravel, and PHP.
             </p>
             
+            <p className="text-sm text-white/50 leading-relaxed mb-4">
+              At Webly Tech, I improved page load speed by 30% through performance 
+              optimization and caching, reduced API response time by 25% via Laravel 
+              query optimization, and built reusable UI components that cut duplicate 
+              code by 40%.
+            </p>
+
+            <p className="text-sm text-white/50 leading-relaxed mb-4">
+              I've contributed to enterprise platforms including e-commerce marketplaces, 
+              event ticketing systems with seat reservations, and ERP solutions for 
+              inventory and operations management.
+            </p>
+
             <p className="text-sm text-white/50 leading-relaxed mb-8">
-              With expertise in modern frontend frameworks and robust backend systems, 
-              I build applications that are performant, scalable, and delightful to use.
+              Experienced in agile workflows using Git, GitHub, Trello, Jira, and 
+              collaborative tools. Passionate about system architecture, database 
+              modeling, and delivering measurable impact on speed and maintainability.
             </p>
 
             {/* Skills Grid */}
@@ -193,7 +240,7 @@ const About = () => {
         </div>
 
         {/* Services Section */}
-        <div className="services-grid grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="services-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <div
               key={index}
