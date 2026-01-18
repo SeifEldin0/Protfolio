@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+// Force rebuild for hydration fix
 
 const Projects = () => {
   const sectionRef = useRef(null);
