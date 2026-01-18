@@ -42,7 +42,7 @@ const Projects = () => {
       title: "Weather App",
       category: "API Integration",
       description: "Live weather updates with city search.",
-      image: "/Weatherapp_icon.png",
+      image: "/Weatherapp.png",
       tags: ["Next.js", "API", "Tailwind"],
       link: "https://weather-app-six-weld-42.vercel.app/",
       color: "#fb923c"
