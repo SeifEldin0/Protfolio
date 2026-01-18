@@ -93,8 +93,8 @@ const Projects = () => {
   return (
     <section ref={sectionRef} id="projects" className="section relative overflow-hidden">
       {/* Subtle background */}
-      <div className="absolute top-1/3 right-0 w-[300px] h-[300px] orb orb-gold translate-x-1/2" />
-      <div className="absolute bottom-1/4 left-0 w-[250px] h-[250px] orb orb-teal -translate-x-1/2" />
+      <div className="absolute top-1/3 right-0 w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[300px] md:h-[300px] orb orb-gold translate-x-1/2" />
+      <div className="absolute bottom-1/4 left-0 w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] orb orb-teal -translate-x-1/2" />
       
       <div className="section-container">
         {/* Header */}
@@ -109,7 +109,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="projects-grid grid sm:grid-cols-2 gap-4 md:gap-6">
+        <div className="projects-grid grid sm:grid-cols-2 gap-4 md:gap-8">
           {projects.map((project, index) => (
             <a
               key={index}
@@ -121,7 +121,7 @@ const Projects = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div 
-                className="relative h-[280px] sm:h-[320px] md:h-[360px] rounded-2xl overflow-hidden bg-[#141416] border border-white/[0.05] transition-all duration-200"
+                className="relative h-[240px] sm:h-[300px] md:h-[360px] rounded-2xl overflow-hidden bg-[#141416] border border-white/[0.05] transition-all duration-200"
                 style={{
                   boxShadow: hoveredIndex === index 
                     ? `0 16px 32px -12px ${project.color}25` 
@@ -153,7 +153,7 @@ const Projects = () => {
                   {/* Top Row */}
                   <div className="flex items-start justify-between">
                     <span 
-                      className="px-3 py-1 rounded-full text-xs font-medium text-white/90 backdrop-blur-sm"
+                      className="px-3 py-1 rounded-full text-xs font-medium text-gradient/90 backdrop-blur-sm"
                       style={{ backgroundColor: `${project.color}30`, border: `1px solid ${project.color}30` }}
                     >
                       {project.category}
@@ -167,7 +167,7 @@ const Projects = () => {
                       {project.tags.map((tag, tagIndex) => (
                         <span 
                           key={tagIndex} 
-                          className="px-2 py-0.5 rounded-full text-[10px] font-medium text-white/60 bg-white/5 border border-white/10"
+                          className="px-2 py-0.5 rounded-full text-[10px] font-bold text-gradient/90 backdrop-blur-lg border border-white/10"
                         >
                           {tag}
                         </span>
@@ -175,15 +175,15 @@ const Projects = () => {
                     </div>
 
                     {/* Title & Description */}
-                    <h3 className="text-lg md:text-xl font-semibold text-white mb-1">
+                    <h3 className="text-lg md:text-xl font-semibold text-gradient mb-1">
                       {project.title}
                     </h3>
-                    <p className="text-white/50 text-sm leading-relaxed mb-4">
+                    <p className="text-gradient/50 font-semibold text-sm  leading-relaxed mb-4">
                       {project.description}
                     </p>
 
                     {/* Link indicator */}
-                    <div className="flex items-center gap-2 text-white/70 text-sm">
+                    <div className="flex items-center gap-2 text-gradient/70 text-sm">
                       <span 
                         className="flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200"
                         style={{ 

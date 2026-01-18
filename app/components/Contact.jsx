@@ -138,7 +138,7 @@ const Contact = () => {
   return (
     <section ref={sectionRef} id="contact" className="section relative overflow-hidden">
       {/* Subtle background */}
-      <div className="absolute top-1/4 left-0 w-[250px] h-[250px] orb orb-teal -translate-x-1/2" />
+      <div className="absolute top-1/4 left-0 w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] orb orb-teal -translate-x-1/2" />
       
       <div className="section-container">
         {/* Header */}

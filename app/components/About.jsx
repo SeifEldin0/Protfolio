@@ -142,7 +142,7 @@ const About = () => {
   return (
     <section ref={sectionRef} id="about" className="section relative overflow-hidden">
       {/* Subtle background */}
-      <div className="absolute top-1/2 -left-32 w-[300px] h-[300px] orb orb-teal -translate-y-1/2" />
+      <div className="absolute top-1/2 -left-32 w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[300px] md:h-[300px] orb orb-teal -translate-y-1/2" />
       
       <div className="section-container">
         {/* Header */}
@@ -167,6 +167,8 @@ const About = () => {
                   src={assets.user_image}
                   alt="Seif Aldin"
                   fill
+                  priority
+                  sizes="(max-width: 768px) 80vw, 40vw"
                   className="object-cover"
                 />
                 
@@ -193,7 +195,7 @@ const About = () => {
 
           {/* Text Column */}
           <div ref={contentRef} className="about-content">
-            <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+            <h3 className="text-xl md:text-2xl font-semibold text-gradient mb-4">
               Hi, I'm <span className="text-gradient">Seif Al Din Mostafa</span>
             </h3>
             

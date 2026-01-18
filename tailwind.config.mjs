@@ -44,6 +44,9 @@ export default {
       },
       fontFamily: {
         outfit: ["var(--font-outfit)", "sans-serif"],
+        ovo: ["var(--font-ovo)", "serif"],
+        exo: ["var(--font-exo)", "sans-serif"],
+        cairo: ["var(--font-cairo)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
       animation: {

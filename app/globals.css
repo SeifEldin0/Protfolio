@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/* Self-hosted Nexokora Techno (place font files under /public/fonts/) */
+@font-face {
+  font-family: 'NexokoraTechno';
+  src: url('/fonts/NexokoraTechno-Regular.woff2') format('woff2'),
+       url('/fonts/NexokoraTechno-Regular.woff') format('woff');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Logo font utility */
+.font-logo {
+  font-family: 'NexokoraTechno', var(--font-exo), sans-serif;
+  letter-spacing: 0.02em;
+}
+
 /* ═══════════════════════════════════════════════════════════
    2026 ULTRA-MODERN PORTFOLIO STYLES
    Space Grotesk + Syne Typography System
@@ -49,8 +65,8 @@
 
 /* Reset & Base */
 *, *::before, *::after {
-  margin: 0;
-  padding: 0;
+  /* margin: 5px;
+  padding: 5px; */
   box-sizing: border-box;
 }
 
@@ -60,7 +76,7 @@ html {
 }
 
 body {
-  font-family: var(--font-space), system-ui, sans-serif;
+  font-family: var(--font-exo), var(--font-cairo), system-ui, sans-serif;
   background: var(--bg-void);
   color: var(--text-primary);
   overflow-x: hidden;
@@ -90,7 +106,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-syne), var(--font-space), sans-serif;
+  font-family: var(--font-exo), var(--font-cairo), sans-serif;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -282,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 8px;
   padding: 12px 28px;
-  font-family: var(--font-space);
+  font-family: var(--font-exo);
   font-weight: 500;
   font-size: 0.9rem;
   color: white;
@@ -311,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 8px;
   padding: 12px 28px;
-  font-family: var(--font-space);
+  font-family: var(--font-exo);
   font-weight: 500;
   font-size: 0.9rem;
   color: var(--text-primary);
@@ -352,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-space);
+  font-family: var(--font-exo);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -369,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-family: var(--font-syne);
+  font-family: var(--font-exo);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   line-height: 1.05;

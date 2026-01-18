@@ -78,8 +78,8 @@ const Header = () => {
     >
       {/* Simplified Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b] via-[#0f0f11] to-[#0a0a0b]" />
-      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] orb orb-teal" />
-      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] orb orb-gold" />
+      <div className="absolute top-0 left-1/4 w-[220px] h-[220px] md:w-[400px] md:h-[400px] orb orb-teal" />
+      <div className="absolute bottom-1/4 right-1/4 w-[180px] h-[180px] md:w-[300px] md:h-[300px] orb orb-gold" />
 
       {/* Main Content */}
       <div ref={contentRef} className="relative z-10 section-container py-12 md:py-20">

@@ -90,9 +90,9 @@ const Navbar = () => {
             className="flex items-center gap-2"
           >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#708f96] to-[#aa895f] flex items-center justify-center">
-              <span className="text-sm font-bold text-white">S</span>
+              <span className="text-sm font-bold text-white font-logo">S</span>
             </div>
-            <span className="hidden sm:block text-base font-medium">
+            <span className="hidden sm:block text-base font-medium font-logo">
               <span className="text-white">Seif</span>
               <span className="text-white/40">.dev</span>
             </span>

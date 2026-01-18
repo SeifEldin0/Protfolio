@@ -1,10 +1,12 @@
-import { Outfit, Ovo } from "next/font/google";
+import { Outfit, Ovo, Exo_2, Cairo } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://seif-aldin-dev.vercel.app";
 const siteName = "Seif Aldin Portfolio";
-const siteTitle = "Seif Aldin | Full-Stack Developer | React, Next.js & Laravel Expert";
-const siteDescription = "Seif Aldin (سيف الدين) is a professional Full-Stack Developer from Egypt, specializing in Next.js, React, and Laravel. Building high-performance, scalable web applications for clients worldwide. Available for freelance projects.";
+const siteTitle =
+  "Seif Aldin | Full-Stack Developer | React, Next.js & Laravel Expert";
+const siteDescription =
+  "Seif Aldin (سيف الدين) is a professional Full-Stack Developer from Egypt, specializing in Next.js, React, and Laravel. Building high-performance, scalable web applications for clients worldwide. Available for freelance projects.";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -20,6 +22,20 @@ const ovo = Ovo({
   display: "swap",
 });
 
+const exo = Exo_2({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-exo",
+  display: "swap",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cairo",
+  display: "swap",
+});
+
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -29,17 +45,62 @@ export const metadata = {
   description: siteDescription,
   keywords: [
     // English Keywords
-    "Seif Aldin", "Seif Eldin", "Seif Mostafa", "Seif Aldin Developer",
-    "Full Stack Developer", "Full Stack Developer Egypt", "Web Developer Egypt",
-    "Next.js Developer", "Next.js Expert", "React Developer", "React Expert",
-    "Laravel Developer", "Laravel Expert", "PHP Developer",
-    "Frontend Developer", "Backend Developer", "JavaScript Developer",
-    "Freelance Web Developer", "Freelance Developer Egypt", "Hire Web Developer",
-    "Tailwind CSS Developer", "TypeScript Developer",
+    "Seif Aldin",
+    "Seif Eldin",
+    "Seif Mostafa",
+    "Seif Aldin Developer",
+    "Full Stack Developer",
+    "Full Stack Developer Egypt",
+    "Web Developer Egypt",
+    "Next.js Developer",
+    "Next.js Expert",
+    "React Developer",
+    "React Expert",
+    "Laravel Developer",
+    "Laravel Expert",
+    "PHP Developer",
+    "Laravel Developer",
+    "Laravel Expert",
+    "PHP Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "JavaScript Developer",
+    "Freelance Web Developer",
+    "Freelance Developer Egypt",
+    "Hire Web Developer",
+    "Tailwind CSS Developer",
+    "TypeScript Developer",
+    "saifeldin0",
+    "seifeldin0",
+    "saif aldin",
+    "saif web developer",
+    "web Developer",
+    "ts",
+    "saif aldin",
+    "seifeldin",
+    "saif aldin",
+    "seif web developer",
     // Arabic Keywords
-    "سيف الدين", "سيف الدين مصطفى", "مطور ويب", "مطور فول ستاك",
-    "برمجة مواقع", "تصميم مواقع", "مبرمج مصري", "مطور ويب محترف",
-    "مطور ريأكت", "مطور نكست جي اس", "مطور لارافيل",
+    "سيف الدين",
+    "سيف الدين مصطفى",
+    "مطور ويب",
+    "مطور فول ستاك",
+    "سيف الدين مطور",
+    "مطور نكست جي اس",
+    "مطور ريأكت",
+    "مطور لارافيل",
+    "مطور بي إتش بي",
+    "سيف الدين مبرمج",
+    "برمجة مواقع",
+    "سيف الدين فريلانس",
+    "سيف ويب ديفيلوبر",
+    "سيف الدين مصر",
+    "تصميم مواقع",
+    "مبرمج مصري",
+    "مطور ويب محترف",
+    "مطور ريأكت",
+    "مطور نكست جي اس",
+    "مطور لارافيل",
   ],
   authors: [{ name: "Seif Aldin", url: siteUrl }],
   creator: "Seif Aldin",
@@ -126,7 +187,12 @@ export default function RootLayout({ children }) {
         "@type": "Person",
         "@id": `${siteUrl}/#person`,
         name: "Seif Aldin",
-        alternateName: ["Seif Eldin", "سيف الدين", "Seif Mostafa", "سيف الدين مصطفى"],
+        alternateName: [
+          "Seif Eldin",
+          "سيف الدين",
+          "Seif Mostafa",
+          "سيف الدين مصطفى",
+        ],
         givenName: "Seif",
         familyName: "Aldin",
         jobTitle: "Full-Stack Web Developer",
@@ -144,9 +210,20 @@ export default function RootLayout({ children }) {
           "https://github.com/SeifEldin0",
         ],
         knowsAbout: [
-          "React", "Next.js", "Laravel", "PHP", "JavaScript", "TypeScript",
-          "Tailwind CSS", "Node.js", "MySQL", "MongoDB", "REST API",
-          "Web Development", "Frontend Development", "Backend Development"
+          "React",
+          "Next.js",
+          "Laravel",
+          "PHP",
+          "JavaScript",
+          "TypeScript",
+          "Tailwind CSS",
+          "Node.js",
+          "MySQL",
+          "MongoDB",
+          "REST API",
+          "Web Development",
+          "Frontend Development",
+          "Backend Development",
         ],
         knowsLanguage: ["English", "Arabic"],
         nationality: { "@type": "Country", name: "Egypt" },
@@ -186,7 +263,8 @@ export default function RootLayout({ children }) {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}/#service`,
         name: "Seif Aldin - Web Development Services",
-        description: "Professional web development services including React, Next.js, Laravel applications, and full-stack solutions.",
+        description:
+          "Professional web development services including React, Next.js, Laravel applications, and full-stack solutions.",
         provider: { "@id": `${siteUrl}/#person` },
         areaServed: { "@type": "GeoCircle", name: "Worldwide" },
         serviceType: [
@@ -233,9 +311,24 @@ export default function RootLayout({ children }) {
         "@id": `${siteUrl}/#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
-          { "@type": "ListItem", position: 2, name: "About", item: `${siteUrl}/#about` },
-          { "@type": "ListItem", position: 3, name: "Projects", item: `${siteUrl}/#projects` },
-          { "@type": "ListItem", position: 4, name: "Contact", item: `${siteUrl}/#contact` },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "About",
+            item: `${siteUrl}/#about`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Projects",
+            item: `${siteUrl}/#projects`,
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: "Contact",
+            item: `${siteUrl}/#contact`,
+          },
         ],
       },
     ],
@@ -248,27 +341,32 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#0a0a0b" />
         <meta name="color-scheme" content="dark" />
         <meta name="msapplication-TileColor" content="#0a0a0b" />
-        
+
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
+
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        
+
         {/* Geo Tags for Local SEO */}
         <meta name="geo.region" content="EG" />
         <meta name="geo.placename" content="Egypt" />
-        
+
         {/* Language */}
         <meta httpEquiv="content-language" content="en, ar" />
       </head>
-      <body className={`${outfit.variable} ${ovo.variable} font-outfit antialiased`}>
+      <body
+        className={`${outfit.variable} ${ovo.variable} ${exo.variable} ${cairo.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
