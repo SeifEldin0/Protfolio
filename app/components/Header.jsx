@@ -82,17 +82,17 @@ const Header = () => {
       <div className="absolute bottom-1/4 right-1/4 w-[180px] h-[180px] md:w-[300px] md:h-[300px] orb orb-gold" />
 
       {/* Main Content */}
-      <div ref={contentRef} className="relative z-10 section-container py-12 md:py-20">
+      <div ref={contentRef} className="relative z-10 section-container py-8 sm:py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Profile Image */}
-          <div ref={imageContainerRef} className="mb-8 flex justify-center">
+          <div ref={imageContainerRef} className="mb-5 sm:mb-6 md:mb-8 flex justify-center">
             <div className="relative group">
               {/* Simple glow ring */}
               <div className="absolute -inset-1 bg-gradient-to-r from-[#708f96] to-[#aa895f] rounded-full opacity-60 blur-sm" />
               
               {/* Image container */}
-              <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-white/10 bg-[#0f0f11]">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-white/10 bg-[#0f0f11]">
                 <Image
                   src={assets.profile_img}
                   alt="Seif Aldin"
@@ -103,39 +103,39 @@ const Header = () => {
               </div>
 
               {/* Status badge */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 bg-[#141416] border border-white/10 rounded-full whitespace-nowrap">
-                <span className="relative flex h-2 w-2">
+              <div className="absolute -bottom-1.5 sm:-bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 bg-[#141416] border border-white/10 rounded-full whitespace-nowrap">
+                <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-emerald-500" />
                 </span>
-                <span className="text-xs text-white/70">Available</span>
+                <span className="text-[10px] sm:text-xs text-white/70">Available</span>
               </div>
             </div>
           </div>
 
           {/* Badge */}
-          <div className="hero-badge mb-5">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.06] text-sm">
+          <div className="hero-badge mb-3 sm:mb-4 md:mb-5">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/[0.04] border border-white/[0.06] text-xs sm:text-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-[#708f96]" />
               <span className="text-white/60">Full-Stack Developer</span>
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="mb-6">
-            <span className="hero-title-line block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+          <h1 className="mb-4 sm:mb-5 md:mb-6">
+            <span className="hero-title-line block text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
               Building
             </span>
-            <span className="hero-title-line block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+            <span className="hero-title-line block text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
               <span className="text-gradient">Digital</span>
             </span>
-            <span className="hero-title-line block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white/90 leading-[1.1] tracking-tight">
+            <span className="hero-title-line block text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white/90 leading-[1.1] tracking-tight">
               Experiences
             </span>
           </h1>
 
           {/* Description */}
-          <p className="hero-desc max-w-xl mx-auto text-base md:text-lg text-white/50 mb-10 leading-relaxed px-4">
+          <p className="hero-desc max-w-xl mx-auto text-sm sm:text-base md:text-lg text-white/50 mb-6 sm:mb-8 md:mb-10 leading-relaxed">
             Crafting high-performance web apps with 
             <span className="text-[#708f96]"> React</span>, 
             <span className="text-[#aa895f]"> Next.js</span> & 
@@ -143,7 +143,7 @@ const Header = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="hero-buttons flex flex-wrap justify-center gap-3 mb-12">
+          <div className="hero-buttons flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-8 sm:mb-10 md:mb-12">
             <a href="#projects" className="btn-primary">
               <span>View Projects</span>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -165,13 +165,13 @@ const Header = () => {
           </div>
 
           {/* Stats */}
-          <div className="hero-stats flex justify-center gap-8 md:gap-12">
+          <div className="hero-stats flex justify-center gap-6 sm:gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-gradient mb-0.5">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient mb-0.5">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-white/40">{stat.label}</div>
+                <div className="text-[10px] sm:text-xs md:text-sm text-white/40">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -179,9 +179,9 @@ const Header = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
-        <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">Scroll</span>
-        <div className="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-1.5">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 sm:gap-2 opacity-60">
+        <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white/40">Scroll</span>
+        <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border border-white/20 flex justify-center pt-1.5">
           <div className="w-1 h-1.5 rounded-full bg-white/50 animate-bounce" />
         </div>
       </div>

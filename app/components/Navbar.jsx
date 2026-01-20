@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
+import { assets } from "@/assets/assets";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,9 +91,14 @@ const Navbar = () => {
             onClick={(e) => handleNavClick(e, "#home")}
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#708f96] to-[#aa895f] flex items-center justify-center">
-              <span className="text-sm font-bold text-white font-logo">S</span>
-            </div>
+              <Image
+                src={assets.logo}
+                alt="Seif logo"
+                width={100}
+                height={120}
+                className=""
+                priority
+              />
             <span className="hidden sm:block text-base font-medium font-logo">
               <span className="text-white">Seif</span>
               <span className="text-white/40">.dev</span>

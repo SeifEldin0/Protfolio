@@ -142,51 +142,51 @@ const About = () => {
   return (
     <section ref={sectionRef} id="about" className="section relative overflow-hidden">
       {/* Subtle background */}
-      <div className="absolute top-1/2 -left-32 w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[300px] md:h-[300px] orb orb-teal -translate-y-1/2" />
+      <div className="absolute top-1/2 -left-32 w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[300px] md:h-[300px] orb orb-teal -translate-y-1/2 opacity-40 sm:opacity-100" />
       
-      <div className="section-container">
+      <div className="section-container px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <span className="section-label">About Me</span>
-          <h2 className="section-title">
+          <h2 className="section-title text-2xl sm:text-3xl md:text-4xl">
             Crafting <span className="text-gradient">Digital</span> Excellence
           </h2>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start mb-12 sm:mb-16">
           {/* Image Column */}
-          <div className="relative mx-auto lg:mx-0 max-w-sm lg:max-w-none">
+          <div className="relative mx-auto lg:mx-0 max-w-md lg:max-w-none w-full">
             <div className="relative">
               {/* Simple gradient frame */}
               <div className="absolute -inset-2 bg-gradient-to-br from-[#708f96]/20 to-[#aa895f]/20 rounded-2xl blur-sm" />
               
               {/* Image container */}
-              <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-white/10 bg-[#141416]">
+              <div className="relative w-full h-[400px] xs:h-[450px] sm:h-[500px] md:h-[550px] lg:h-auto lg:aspect-[4/5] rounded-xl overflow-hidden border border-white/10 bg-[#141416]">
                 <Image
                   src={assets.user_image}
                   alt="Seif Aldin"
                   fill
                   priority
-                  sizes="(max-width: 768px) 80vw, 40vw"
-                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                  className="object-cover object-top"
                 />
                 
                 {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0b] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0b]/30 via-transparent to-transparent" />
               </div>
 
               {/* Experience badge */}
-              <div className="absolute -bottom-4 -right-4 md:-right-6">
-                <div className="card-light px-4 py-3 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#708f96] to-[#aa895f] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-right-6">
+                <div className="card-light px-3 py-2 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#708f96] to-[#aa895f] flex items-center justify-center">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xl font-bold text-white">2+</p>
-                    <p className="text-xs text-white/50">Years Exp.</p>
+                    <p className="text-lg sm:text-xl font-bold text-white">2+</p>
+                    <p className="text-[10px] sm:text-xs text-white/50">Years Exp.</p>
                   </div>
                 </div>
               </div>
@@ -194,44 +194,44 @@ const About = () => {
           </div>
 
           {/* Text Column */}
-          <div ref={contentRef} className="about-content">
-            <h3 className="text-xl md:text-2xl font-semibold text-gradient mb-4">
+          <div ref={contentRef} className="about-content space-y-3 sm:space-y-4">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gradient">
               Hi, I'm <span className="text-gradient">Seif Al Din Mostafa</span>
             </h3>
             
-            <p className="text-base text-white/60 leading-relaxed mb-4">
+            <p className="text-sm sm:text-base text-white/60 leading-relaxed">
               Full-Stack Web Developer with proven experience delivering scalable, 
               high-performance, and user-centric web applications using React.js, 
               Next.js, Vue.js, Nuxt.js, Laravel, and PHP.
             </p>
             
-            <p className="text-sm text-white/50 leading-relaxed mb-4">
-              At Webly Tech, I improved page load speed by 30% through performance 
+            <p className="text-xs sm:text-sm text-white/50 leading-relaxed">
+              At Work, I improved page load speed by 30% through performance 
               optimization and caching, reduced API response time by 25% via Laravel 
               query optimization, and built reusable UI components that cut duplicate 
               code by 40%.
             </p>
 
-            <p className="text-sm text-white/50 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm text-white/50 leading-relaxed">
               I've contributed to enterprise platforms including e-commerce marketplaces, 
               event ticketing systems with seat reservations, and ERP solutions for 
               inventory and operations management.
             </p>
 
-            <p className="text-sm text-white/50 leading-relaxed mb-8">
+            <p className="text-xs sm:text-sm text-white/50 leading-relaxed">
               Experienced in agile workflows using Git, GitHub, Trello, Jira, and 
               collaborative tools. Passionate about system architecture, database 
               modeling, and delivering measurable impact on speed and maintainability.
             </p>
 
             {/* Skills Grid */}
-            <div className="skills-grid">
-              <h4 className="text-xs uppercase tracking-wider text-white/40 mb-3">Tech Stack</h4>
-              <div className="flex flex-wrap gap-2">
+            <div className="skills-grid mt-2">
+              <h4 className="text-xs uppercase tracking-wider text-white/40 mb-2 sm:mb-3">Tech Stack</h4>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="skill-item px-3 py-1.5 rounded-full text-xs font-medium text-white/70 bg-white/[0.04] border border-white/[0.06] hover:border-[#708f96]/40 transition-colors duration-150"
+                    className="skill-item px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-medium text-white/70 bg-white/[0.04] border border-white/[0.06] hover:border-[#708f96]/40 transition-colors duration-150"
                   >
                     {skill}
                   </span>
@@ -242,22 +242,22 @@ const About = () => {
         </div>
 
         {/* Services Section */}
-        <div className="services-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card group card-light p-5 md:p-6"
+              className="service-card group card-light p-4 sm:p-5 md:p-6"
             >
               {/* Icon */}
-              <div className={`inline-flex w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} items-center justify-center text-white mb-4`}>
+              <div className={`inline-flex w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br ${service.color} items-center justify-center text-white mb-3 sm:mb-4`}>
                 {service.icon}
               </div>
               
               {/* Content */}
-              <h3 className="text-base font-semibold text-white mb-2">
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-1.5 sm:mb-2">
                 {service.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>

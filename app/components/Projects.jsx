@@ -13,6 +13,42 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "MouStore E-Commerce",
+      category: "Full-Stack",
+      description: "Modern online store with cart, payments & inventory.",
+      image: "/cosmetic.png",
+      tags: ["Next.js", "Vite", "Tailwind"," Laravel"],
+      link: "https://moustore.vercel.app/",
+      color: "#a78bfa"
+    },
+    {
+      title: "Movie App",
+      category: "API Integration",
+      description: "Browse movies with details & ratings.",
+      image: "/movie.png",
+      tags: ["Next.js", "API", "Tailwind"],
+      link: "https://blog-movies.vercel.app/",
+      color: "#fb923c"
+    },
+    {
+      title: "Platform For E-learning",
+      category: "Full-Stack",
+      description: "E-learning platform with courses, payments course , about, quizzes & progress tracking.",
+      image: "/platform.png",
+      tags: ["Next.js", "API", "Tailwind"],
+      link: "https://plat-form-courses.vercel.app/",
+      color: "#fb923c"
+    },
+    {
+      title: "portfolio website",
+      category: "API Integration",
+      description: "Personal portfolio to showcase projects & skills.",
+      image: "/portfolio.png",
+      tags: ["Next.js", "API", "Tailwind"],
+      link: "https://seif-aldin-dev.vercel.app",
+      color: "#fb923c"
+    },
+    {
       title: "E-Commerce Platform",
       category: "Full-Stack",
       description: "Modern online store with cart, payments & inventory.",
@@ -25,7 +61,7 @@ const Projects = () => {
       title: "AI Chat Integration",
       category: "AI/ML",
       description: "Intelligent chatbot powered by Gemini AI.",
-      image: "/integration%20Api.png",
+      image: "/integration_Api.png",
       tags: ["React", "Gemini AI", "API"],
       link: "https://ai-liard-kappa.vercel.app/",
       color: "#60a5fa"
@@ -34,7 +70,7 @@ const Projects = () => {
       title: "Prayer Time App",
       category: "Utility",
       description: "Real-time prayer times with location-based data.",
-      image: "/prayrtime_icon.png",
+      image: "/prayrtimes.png",
       tags: ["React", "Vite", "API"],
       link: "https://prayer-time-tau.vercel.app/",
       color: "#34d399"

@@ -6,7 +6,7 @@ const siteName = "Seif Aldin Portfolio";
 const siteTitle =
   "Seif Aldin | Full-Stack Developer | React, Next.js & Laravel Expert";
 const siteDescription =
-  "Seif Aldin (سيف الدين) is a professional Full-Stack Developer from Egypt, specializing in Next.js, React, and Laravel. Building high-performance, scalable web applications for clients worldwide. Available for freelance projects.";
+  "Seif Aldin (سيف الدين) is a professional Full-Stack Developer, specializing in Next.js, React, and Laravel. Building high-performance, scalable web applications for clients worldwide. Available for freelance projects.";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -51,7 +51,7 @@ export const metadata = {
     "Seif Aldin Developer",
     "Full Stack Developer",
     "Full Stack Developer Egypt",
-    "Web Developer Egypt",
+    "Web Developer",
     "Next.js Developer",
     "Next.js Expert",
     "React Developer",
@@ -66,7 +66,7 @@ export const metadata = {
     "Backend Developer",
     "JavaScript Developer",
     "Freelance Web Developer",
-    "Freelance Developer Egypt",
+    "Freelance Developer",
     "Hire Web Developer",
     "Tailwind CSS Developer",
     "TypeScript Developer",
@@ -79,9 +79,32 @@ export const metadata = {
     "saif aldin",
     "seifeldin",
     "saif aldin",
+    "sefoo web developer",
+    "sefoo",
+    "seif developer",
+    "software developer",
+    "software engineer",
+    "web dev",
+    "full stack dev",
+    "full stack web developer",
+    "freelancer",
+    "freelance web developer",
+    "hire me",
+    "english developer",
+    "arabic developer",
+    "engineer",
     "seif web developer",
     // Arabic Keywords
     "سيف الدين",
+    "مهندس برمجيات",
+    "مهندس سيف الدين",
+    "سيف مصطفى",
+    "سيف مصطفي",
+    "مبرمج مواقع",
+    "مبرمج",
+    "مطور مواقع",
+    "سيف الدين مطور",
+    "سيف الدين مبرمج",
     "سيف الدين مصطفى",
     "مطور ويب",
     "مطور فول ستاك",
