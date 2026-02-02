@@ -152,12 +152,16 @@ const Projects = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-item group block"
+              className="project-item group block cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              onClick={(e) => {
+                // Ensure link works on all devices
+                if (e.ctrlKey || e.metaKey || e.button !== 0) return;
+              }}
             >
               <div 
-                className="relative h-[240px] sm:h-[300px] md:h-[360px] rounded-2xl overflow-hidden bg-[#141416] border border-white/[0.05] transition-all duration-200"
+                className="relative h-[240px] sm:h-[300px] md:h-[360px] rounded-2xl overflow-hidden bg-[#141416] border border-white/[0.05] transition-all duration-200 pointer-events-none"
                 style={{
                   boxShadow: hoveredIndex === index 
                     ? `0 16px 32px -12px ${project.color}25` 
