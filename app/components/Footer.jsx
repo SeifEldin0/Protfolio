@@ -9,6 +9,15 @@ const Footer = () => {
   const footerRef = useRef(null);
 
   useEffect(() => {
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      gsap.set(".footer-content > *", { y: 0, opacity: 1 });
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo(".footer-content > *",
         { y: 20, opacity: 0 },
@@ -33,10 +42,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" }
   ];
 
   const socialLinks = [
@@ -70,8 +79,12 @@ const Footer = () => {
   ];
 
   const handleNavClick = (e, href) => {
+    if (typeof window !== "undefined" && window.location.pathname !== "/") {
+      return;
+    }
     e.preventDefault();
-    const element = document.querySelector(href);
+    const targetId = href.includes("#") ? `#${href.split("#")[1]}` : href;
+    const element = document.querySelector(targetId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -92,7 +105,7 @@ const Footer = () => {
               <span className="text-gradient">Seif</span>
               <span className="text-white/80">.dev</span>
             </a>
-            <p className="text-white/40 text-xs mt-1">Building digital experiences</p>
+            <p className="text-white/60 text-xs mt-1">Full-Stack Software Development (Web & Mobile)</p>
           </div>
 
           {/* Navigation */}
@@ -102,7 +115,7 @@ const Footer = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-xs text-white/40 hover:text-white/80 transition-colors duration-150"
+                className="text-xs text-white/70 hover:text-white transition-colors duration-150"
               >
                 {link.name}
               </a>
@@ -117,7 +130,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-white/40 hover:text-white/80 hover:border-[#708f96]/40 transition-all duration-150"
+                className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-white/70 hover:text-white hover:border-[#708f96]/50 transition-all duration-150"
                 aria-label={social.name}
               >
                 {social.icon}
@@ -127,11 +140,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-6 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-white/30">
-          <p>© {currentYear} Seif Mostafa. All rights reserved.</p>
+        <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
+          <p>© {currentYear} Seif Aldin Mostafa. All rights reserved.</p>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-            <span>Available for work</span>
+            <span className="text-emerald-400 font-medium">Available for work</span>
           </div>
         </div>
       </div>

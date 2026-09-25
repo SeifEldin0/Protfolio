@@ -1,18 +1,8 @@
 @import "tailwindcss";
 
-/* Self-hosted Nexokora Techno (place font files under /public/fonts/) */
-@font-face {
-  font-family: 'NexokoraTechno';
-  src: url('/fonts/NexokoraTechno-Regular.woff2') format('woff2'),
-       url('/fonts/NexokoraTechno-Regular.woff') format('woff');
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Logo font utility */
 .font-logo {
-  font-family: 'NexokoraTechno', var(--font-exo), sans-serif;
+  font-family: var(--font-exo), var(--font-outfit), sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -314,11 +304,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px -8px rgba(167, 139, 250, 0.5);
+  box-shadow: 0 8px 24px -6px rgba(112, 143, 150, 0.45);
 }
 
 .btn-primary:active {
   transform: translateY(0);
+}
+
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-1);
+  outline-offset: 3px;
 }
 
 .btn-outline {
@@ -348,6 +348,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline:active {
   transform: translateY(0);
 }
+
 
 /* ═══════════════════════════════════════════════════════════
    SECTION STYLES

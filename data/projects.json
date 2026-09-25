@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "lms-mastery",
+    "slug": "lms-mastery",
+    "title": "LMS Mastery",
+    "category": "Full-Stack LMS / EdTech",
+    "shortDescription": "Full-stack Learning Management System with structured learning paths, student progress tracking, revision planning, and FastAPI AI service integration.",
+    "description": "LMS Mastery is an end-to-end Learning Management System engineered to provide structured learning progression, comprehensive group and session management, and AI-assisted tutoring. The application pairs a robust Laravel transactional backend with a Next.js client interface and a dedicated FastAPI microservice for AI-powered revision workflows.",
+    "role": "Full-Stack Developer (Laravel Backend, Next.js Frontend, Database Architecture & FastAPI AI Integration)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "React",
+      "Next.js",
+      "PostgreSQL",
+      "FastAPI",
+      "Python",
+      "Tailwind CSS",
+      "REST APIs"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "Repository Pattern",
+        "Form Requests",
+        "Policies"
+      ],
+      "frontend": [
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "Mobile-Responsive Layouts"
+      ],
+      "database": [
+        "PostgreSQL",
+        "Relational Schema Design",
+        "Index Optimization"
+      ],
+      "aiServices": [
+        "FastAPI",
+        "Python",
+        "AI Tutoring Integration",
+        "Asynchronous Processing"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Postman",
+        "Vercel"
+      ]
+    },
+    "architecture": "Next.js Client ↔ Laravel Core REST API (Auth, RBAC, Business Logic) ↔ PostgreSQL Database ↔ FastAPI Python Microservice (AI Tutoring & Revision Planning)",
+    "coverImage": "/projects/lms-mastery/lms.png",
+    "image": "/projects/lms-mastery/lms.png",
+    "tags": [
+      "Laravel",
+      "Next.js",
+      "PostgreSQL",
+      "FastAPI",
+      "AI Integration"
+    ],
+    "screenshots": [
+      {
+        "url": "/projects/lms-mastery/lms.png",
+        "title": "Platform Overview & Learning Dashboard"
+      },
+      {
+        "url": "/projects/lms-mastery/lms-chatbot.png",
+        "title": "AI-Powered Learning Assistant & Chatbot"
+      },
+      {
+        "url": "/projects/lms-mastery/lms-chatbot1.png",
+        "title": "Interactive Study & Revision Workflow"
+      },
+      {
+        "url": "/projects/lms-mastery/platform.png",
+        "title": "Course Platform & Module Progression"
+      }
+    ],
+    "overview": {
+      "purpose": "Deliver an integrated educational environment that tracks pedagogical progression and provides on-demand intelligent revision assistance.",
+      "targetAudience": "Students seeking structured study schedules and instructors requiring verifiable mastery tracking.",
+      "problemSolved": "Eliminates fragmented learning tools by unifying course delivery, student session management, and automated AI study support into a single reliable system."
+    },
+    "requirements": [
+      "Role-based access separation for students, instructors, and administrators",
+      "Hierarchical learning paths supporting multiple groups, sessions, and prerequisites",
+      "Real-time student progress calculation and milestone mastery verification",
+      "Automated daily revision planning tailored to individual student performance",
+      "Decoupled AI service capable of processing contextual student inquiries without blocking core transactional endpoints"
+    ],
+    "solution": "Architected a decoupled multi-tier system: Laravel provides transactional REST APIs with strict FormRequest validation and Policy checks over PostgreSQL, while an asynchronous FastAPI Python microservice handles AI tutoring and dynamic revision logic. The Next.js frontend delivers responsive, low-latency access across web and mobile viewports.",
+    "features": [
+      "Role-based authentication & authorization separating student, instructor, and admin privileges",
+      "Hierarchical learning paths organized by groups, active sessions, and subject modules",
+      "Comprehensive student progress telemetry and mastery benchmark evaluations",
+      "Daily revision planning and customized study schedules tailored to student pace",
+      "Asynchronous FastAPI microservice integration powering AI tutoring and contextual QA",
+      "PostgreSQL database architecture optimized for relational queries and reporting"
+    ],
+    "technicalChallenges": [
+      "Decoupling computationally intensive AI chat responses from critical database transactional operations",
+      "Designing a flexible database schema capable of tracking multi-level student progress across diverse group sessions",
+      "Maintaining low API latency during concurrent student dashboard queries"
+    ],
+    "implementationDetails": [
+      "Structured Laravel controllers as thin request routers delegating to Service and Repository layers",
+      "Implemented strict FormRequest validators and authorization Policies to secure all student and course endpoints",
+      "Engineered inter-service communication between Laravel and FastAPI over secured asynchronous HTTP contracts",
+      "Applied composite indexing in PostgreSQL across student enrollment and session progress tables"
+    ],
+    "testingQuality": [
+      "Functional testing of enrollment workflows, session transitions, and progress calculations",
+      "API contract testing verifying status codes, JSON Resource structures, and error payloads",
+      "Cross-browser and responsive device testing ensuring accessibility across mobile and desktop viewports",
+      "Regression testing of role permission gates to prevent unauthorized resource access"
+    ],
+    "seoGeoAeo": [
+      "Semantic HTML5 structuring with clear heading hierarchies for enhanced crawlability",
+      "Course and Educational Organization Schema.org structured data for rich snippet eligibility",
+      "Answer-oriented content architecture (AEO) designed to be clearly indexed and cited by generative AI search systems (GEO)",
+      "Strict Open Graph metadata and canonical URL declarations"
+    ],
+    "performance": [
+      "Optimized relational queries with eager loading in Laravel Eloquent to eliminate N+1 database queries",
+      "Next.js App Router server component rendering minimizing clientside JavaScript bundle size",
+      "Next/Image responsive image formatting and layout optimization",
+      "Stateless API response caching for static course catalog segments"
+    ],
+    "security": [
+      "Token-based API authentication and robust password hashing",
+      "Granular Role-Based Access Control (RBAC) enforced at controller and route middleware levels",
+      "Strict input sanitization preventing SQL injection and Cross-Site Scripting (XSS)",
+      "Isolated environment configuration shielding sensitive microservice API credentials"
+    ],
+    "featured": true,
+    "color": "#708f96",
+    "link": "https://plat-form-courses.vercel.app/",
+    "githubUrl": null,
+    "seoTitle": "LMS Mastery | Full-Stack Learning Management System Case Study",
+    "seoDescription": "Case study on LMS Mastery, an enterprise full-stack Learning Management System engineered with Laravel, Next.js, PostgreSQL, and FastAPI AI tutoring.",
+    "quickFacts": {
+      "role": "Lead Full-Stack Developer",
+      "systemType": "Learning Management System (LMS)",
+      "backend": "Laravel 11 (PHP 8.3) REST API",
+      "frontend": "Next.js 15 & React 19",
+      "database": "PostgreSQL & Redis",
+      "specialized": "FastAPI (Python) AI Tutoring Microservice"
+    },
+    "faq": [
+      {
+        "question": "How does LMS Mastery maintain database integrity during high concurrent quiz submissions?",
+        "answer": "Submissions are processed within atomic database transactions with row-level locking on submission records in PostgreSQL, preventing score race conditions."
+      },
+      {
+        "question": "How is the AI tutoring assistant decoupled from core learning paths?",
+        "answer": "The AI assistant runs as an isolated asynchronous FastAPI microservice communicating via secured HTTP contracts, ensuring heavy LLM inference never blocks transactional course delivery."
+      }
+    ],
+    "relatedServices": [
+      "Full-Stack Web Development",
+      "Laravel Backend & REST APIs",
+      "LMS & Admin Dashboards"
+    ],
+    "relatedProjects": [
+      "nexa-event",
+      "farm-flex"
+    ],
+    "contextualCta": {
+      "heading": "Planning a Custom LMS or Educational Platform?",
+      "description": "I engineer scalable learning management platforms with progress telemetry, role-based access, and modern AI tutoring integrations.",
+      "buttonText": "Discuss Your LMS Architecture"
+    }
+  },
+  {
+    "id": "hybrid-ids",
+    "slug": "hybrid-ids",
+    "title": "Hybrid IDS",
+    "category": "AI & Cybersecurity",
+    "shortDescription": "Hybrid Intrusion Detection System monitoring real-time web traffic and detecting malicious attacks using combined rule-based filtering and AI classification.",
+    "description": "Hybrid IDS is a full-stack cybersecurity application designed to monitor live web traffic, detect incoming attack vectors, and broadcast instant security alerts. The system combines deterministic rule-based signature matching with machine learning anomaly detection to stop exploits with low false-positive rates.",
+    "role": "Full-Stack & Security Engineer (Traffic Interception, Detection Engine, Real-Time Dashboard & Stripe Billing)",
+    "technologies": [
+      "Python",
+      "Flask",
+      "mitmproxy",
+      "Machine Learning",
+      "Socket.IO",
+      "SQLite",
+      "Stripe",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Python",
+        "Flask",
+        "mitmproxy",
+        "Socket.IO",
+        "REST APIs"
+      ],
+      "frontend": [
+        "Next.js",
+        "Tailwind CSS",
+        "Interactive Telemetry Charts"
+      ],
+      "database": [
+        "SQLite",
+        "Telemetry Log Buffers"
+      ],
+      "aiServices": [
+        "Machine Learning Classifier",
+        "Rule-Based Signature Engine"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Stripe API",
+        "WebSockets"
+      ]
+    },
+    "architecture": "Client Request → mitmproxy Interception → Flask Proxy Engine → Rule-Based Detection & ML Classification → Socket.IO Real-Time Alert Engine → Next.js Dashboard",
+    "coverImage": "/projects/hybrid-ids/ids.png",
+    "image": "/projects/hybrid-ids/ids.png",
+    "tags": [
+      "Python",
+      "Flask",
+      "mitmproxy",
+      "AI / ML",
+      "Socket.IO",
+      "Next.js"
+    ],
+    "screenshots": [
+      {
+        "url": "/projects/hybrid-ids/ids.png",
+        "title": "Hybrid IDS Real-Time Traffic & Alert Dashboard"
+      },
+      {
+        "url": "/projects/hybrid-ids/ids2.png",
+        "title": "Attack Signature & Anomaly Detection Analysis"
+      },
+      {
+        "url": "/projects/hybrid-ids/ids3.png",
+        "title": "Traffic Telemetry & Inspection Logs"
+      },
+      {
+        "url": "/projects/hybrid-ids/ids4.png",
+        "title": "Subscription Management & System Configuration"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide network administrators and web hosts with real-time visibility into malicious HTTP/S traffic through dual-layer attack detection.",
+      "targetAudience": "Security analysts, system administrators, and organizations seeking proactive web application defense.",
+      "problemSolved": "Bridges the gap between rigid signature-only detection (which misses novel zero-day attacks) and sluggish pure-ML models (which overload servers)."
+    },
+    "requirements": [
+      "Low-latency traffic interception capable of reading HTTP request headers and payloads",
+      "Immediate detection of standard attack signatures (SQLi, XSS, Path Traversal)",
+      "Machine learning classification model for spotting anomalous, non-standard attack vectors",
+      "Real-time alert broadcasting to connected dashboards without manual browser refreshes",
+      "Tiered subscription access model integrated with Stripe payment processing"
+    ],
+    "solution": "Built a multi-stage inspection pipeline: live network requests flow through mitmproxy into a Flask proxy engine. Known threat patterns are filtered instantaneously by rule-based signatures, while suspicious payloads are evaluated by an AI model. Critical incidents trigger instant WebSockets alerts via Socket.IO directly to an interactive Next.js telemetry dashboard.",
+    "features": [
+      "Real-time network traffic interception and payload extraction using mitmproxy",
+      "Dual-layer detection: high-speed deterministic rule matching followed by ML anomaly detection",
+      "Instant low-latency security alerts broadcast to the web dashboard via Socket.IO WebSockets",
+      "Interactive incident analytics displaying attack origin, severity ranking, and payload logs",
+      "Stripe payment gateway integration for commercial subscription tiers",
+      "Administrative dashboard for security policy adjustments and incident mitigation"
+    ],
+    "technicalChallenges": [
+      "Minimizing processing latency introduced by proxy interception on high-throughput HTTP traffic",
+      "Balancing AI classification sensitivity to prevent benign user requests from being flagged as malicious",
+      "Maintaining persistent, reliable WebSocket connections between Flask and the Next.js telemetry client"
+    ],
+    "implementationDetails": [
+      "Implemented a custom mitmproxy inline script to forward intercepted request payloads to Flask via fast local sockets",
+      "Built a hybrid evaluation worker separating fast regex-based signature scans from asynchronous ML model inference",
+      "Constructed a reactive Socket.IO event emitter channel pushing structured incident telemetry to frontend listeners",
+      "Integrated Stripe webhook handlers verifying subscription state transitions before granting premium alert feeds"
+    ],
+    "testingQuality": [
+      "Security simulation testing using simulated attack payloads (SQL injection, XSS vectors, parameter fuzzing)",
+      "WebSocket connection resilience testing under simulated network drops and reconnections",
+      "End-to-end payment testing using Stripe test clocks and mock card transactions",
+      "Responsive UI validation of log inspection tables across tablet and mobile viewports"
+    ],
+    "seoGeoAeo": [
+      "Structured technical case study markup optimized for discovery in cybersecurity and AI development queries",
+      "Semantic documentation formatting allowing generative AI engines (GEO) to accurately parse the system architecture",
+      "Clear question-and-answer technical sections for Answer Engine Optimization (AEO)",
+      "Accurate Open Graph cards and canonical indexing configuration"
+    ],
+    "performance": [
+      "Sequential multi-tier filtering ensuring lightweight rules run first, skipping heavy ML processing for obviously benign traffic",
+      "Asynchronous log batching preventing disk I/O bottlenecks during traffic bursts",
+      "Optimized React state updates for the live security event stream to prevent browser UI freezing"
+    ],
+    "security": [
+      "Complete threat detection pipeline covering OWASP Top 10 vulnerabilities",
+      "Safe payload sandboxing during inspection to prevent proxy-level exploits",
+      "Encrypted administrative session management and secure Stripe webhook signature validation",
+      "Least-privilege operational design separating proxy interception from public-facing dashboard APIs"
+    ],
+    "featured": true,
+    "color": "#38bdf8",
+    "link": null,
+    "githubUrl": null,
+    "seoTitle": "Hybrid IDS | AI-Powered Intrusion Detection System Case Study",
+    "seoDescription": "Technical case study of Hybrid IDS, combining mitmproxy live packet inspection, Python signature rules, scikit-learn anomaly detection, and real-time Socket.IO alerts.",
+    "quickFacts": {
+      "role": "Full-Stack & Security Engineer",
+      "systemType": "Cybersecurity & Traffic Monitoring",
+      "backend": "Python, Flask & mitmproxy",
+      "frontend": "Next.js & React Dashboard",
+      "database": "SQLite / Relational Threat Logs",
+      "specialized": "Scikit-Learn ML Classifier & Socket.IO"
+    },
+    "faq": [
+      {
+        "question": "How does the hybrid engine combine signature rules with machine learning?",
+        "answer": "Incoming HTTP/HTTPS traffic first passes through deterministic regex signature filters for known exploits; unflagged anomalous payloads are then evaluated by a pre-trained scikit-learn classifier."
+      },
+      {
+        "question": "How are security alerts broadcast to the operator interface in real-time?",
+        "answer": "The Python detection engine emits event payloads over an internal Socket.IO WebSocket channel, updating the Next.js security console with sub-100ms latency."
+      }
+    ],
+    "relatedServices": [
+      "Full-Stack Web Development",
+      "AI Integration & Real-Time Systems",
+      "Application Testing & QA"
+    ],
+    "relatedProjects": [
+      "lms-mastery",
+      "farm-flex"
+    ],
+    "contextualCta": {
+      "heading": "Need Real-Time Monitoring or Cybersecurity Systems?",
+      "description": "I build real-time packet inspection pipelines, WebSocket alert consoles, and machine learning classification systems.",
+      "buttonText": "Discuss Security Engineering"
+    }
+  },
+  {
+    "id": "mou-store",
+    "slug": "mou-store",
+    "title": "MOU Store",
+    "category": "E-Commerce",
+    "shortDescription": "High-performance cosmetics and beauty e-commerce store with product filtering, dynamic cart workflows, and full-stack backend management.",
+    "description": "MOU Store is a specialized beauty and cosmetics e-commerce platform built to deliver a smooth shopping experience. It features full catalog browsing, category filtering, cart persistence, and a decoupled backend architecture for inventory and order management.",
+    "role": "Full-Stack Developer (API Design, Storefront UI, Cart State Management & Checkout Flow)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Next.js",
+      "React",
+      "REST APIs",
+      "Tailwind CSS"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "API Resources",
+        "Form Requests"
+      ],
+      "frontend": [
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "Mobile-First Design"
+      ],
+      "database": [
+        "MySQL",
+        "Product & Category Schemas"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Vercel"
+      ]
+    },
+    "architecture": "Next.js Storefront Client ↔ Laravel REST API (Product Catalog, Categories, Cart, Order State) ↔ Relational Database",
+    "coverImage": "/projects/mou-store/mou-makeup-store.png",
+    "image": "/projects/mou-store/mou-makeup-store.png",
+    "tags": [
+      "Laravel",
+      "Next.js",
+      "React",
+      "REST APIs",
+      "Tailwind CSS"
+    ],
+    "screenshots": [
+      {
+        "url": "/projects/mou-store/mou-makeup-store.png",
+        "title": "MOU Cosmetics Storefront & Product Showcase"
+      },
+      {
+        "url": "/projects/mou-store/cosmetic.png",
+        "title": "Category Browsing & Product Details"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide a clean, elegant, and high-conversion storefront for beauty and cosmetics retail with reliable order processing.",
+      "targetAudience": "Online retail shoppers seeking intuitive cosmetics browsing, shade selection, and rapid checkout.",
+      "problemSolved": "Solves slow page loads and sluggish cart interactions that typically plague image-heavy cosmetics e-commerce sites."
+    },
+    "requirements": [
+      "Fast, visually polished product showcase highlighting high-resolution cosmetic imagery",
+      "Instant category and price filtering with responsive mobile navigation",
+      "Persistent cart state allowing users to retain selected items across browser reloads",
+      "Secure order submission endpoints connected to backend inventory tracking",
+      "Mobile-first responsive design ensuring seamless browsing on handheld devices"
+    ],
+    "solution": "Developed a modern Next.js client with responsive layouts and fluid interactions backed by structured Laravel REST APIs for order management and catalog synchronization.",
+    "features": [
+      "Dynamic cosmetics product catalog with category classification and real-time search",
+      "Optimized shopping cart state management with persistent storage",
+      "Streamlined checkout flow and order placement pipeline",
+      "Backend administrative functionality for inventory and category management",
+      "Fully responsive mobile-first UI with high-speed page loads"
+    ],
+    "technicalChallenges": [
+      "Maintaining high visual image quality without degrading mobile load performance",
+      "Ensuring cart state synchronization across client sessions and backend validation checks",
+      "Structuring API responses to deliver instant catalog filtering without redundant payload data"
+    ],
+    "implementationDetails": [
+      "Structured product data using normalized tables in MySQL with indexed foreign keys for category hierarchies",
+      "Developed Laravel API Resources to strictly format product payloads, preventing sensitive pricing or inventory data leaks",
+      "Implemented a persistent client-side shopping cart with localStorage fallbacks and server verification",
+      "Used Tailwind CSS to craft an accessible, responsive UI with touch-friendly controls"
+    ],
+    "testingQuality": [
+      "End-to-end shopping flow testing: product discovery → category filter → cart addition → checkout submission",
+      "Cross-device mobile testing across iOS Safari and Android Chrome viewports",
+      "Edge-case testing handling empty carts, out-of-stock items, and invalid checkout form inputs",
+      "API validation testing ensuring rejected invalid requests return structured JSON error payloads"
+    ],
+    "seoGeoAeo": [
+      "Product and Offer Schema.org microdata integration for search engine rich results",
+      "Optimized semantic HTML with descriptive heading tags (`h1`, `h2`, `h3`) and image alt properties",
+      "Structured FAQ and product descriptions designed to trigger answer-box inclusions in search and AI assistants (AEO/GEO)",
+      "Complete Open Graph social sharing tags and clean URL slugs"
+    ],
+    "performance": [
+      "Next/Image modern format delivery (WebP/AVIF) with automatic sizing based on device viewport",
+      "Clientside code splitting ensuring only necessary checkout components load on demand",
+      "Efficient state management eliminating unnecessary React re-renders during cart updates"
+    ],
+    "security": [
+      "CSRF and CORS protection configured across all API endpoints",
+      "FormRequest validation sanitizing all checkout inputs before database insertion",
+      "Rate-limiting applied to public order and contact endpoints to thwart spam and bot activity"
+    ],
+    "featured": true,
+    "color": "#a78bfa",
+    "link": "https://moustore.vercel.app/",
+    "githubUrl": null,
+    "seoTitle": "MOU Store | Modern E-Commerce Platform Case Study",
+    "seoDescription": "Full-stack case study of MOU Store, an optimized cosmetic e-commerce experience featuring responsive catalog filters, cart state management, and inventory checkout.",
+    "quickFacts": {
+      "role": "Full-Stack E-Commerce Developer",
+      "systemType": "E-Commerce & Retail Storefront",
+      "backend": "RESTful API / Inventory Services",
+      "frontend": "React.js & Tailwind CSS",
+      "database": "MySQL / Relational Catalog",
+      "specialized": "Atomic Cart State & Responsive Checkout"
+    },
+    "faq": [
+      {
+        "question": "How are inventory discrepancies prevented during checkout?",
+        "answer": "The order engine uses atomic stock reservation steps during checkout initiation, ensuring products cannot be oversold across concurrent shopper sessions."
+      },
+      {
+        "question": "How is mobile performance optimized for large product catalogs?",
+        "answer": "Catalogs implement client-side faceted filtering with virtualized rendering and responsive WebP image delivery, maintaining 60fps scrolling on mobile devices."
+      }
+    ],
+    "relatedServices": [
+      "Full-Stack Web Development",
+      "E-Commerce & Multi-Vendor",
+      "Performance Optimization"
+    ],
+    "relatedProjects": [
+      "restaurant",
+      "nexa-event"
+    ],
+    "contextualCta": {
+      "heading": "Building a High-Converting E-Commerce Store?",
+      "description": "I engineer custom e-commerce platforms with fast mobile checkout, atomic inventory management, and smooth payment gateway integrations.",
+      "buttonText": "Discuss Your E-Commerce Project"
+    }
+  },
+  {
+    "id": "restaurant-management",
+    "slug": "restaurant-management",
+    "title": "Restaurant Management System",
+    "category": "Restaurant Management",
+    "shortDescription": "Full-stack restaurant operations platform managing table reservations, customer orders, service requests, and role-based staff administration.",
+    "description": "A comprehensive restaurant management system engineered to streamline table reservations, live customer ordering, and kitchen coordination. Built with a modular Laravel backend using Repository and Service patterns alongside Spatie role-based access control.",
+    "role": "Full-Stack Developer (Backend Architecture, Database Modeling, Spatie RBAC & Operations Dashboard)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "React.js",
+      "MySQL",
+      "REST APIs",
+      "Spatie Permission",
+      "Repository Pattern"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "Repository Pattern",
+        "Service Layer",
+        "Spatie Permission"
+      ],
+      "frontend": [
+        "React.js",
+        "Tailwind CSS",
+        "Operations Dashboard UI"
+      ],
+      "database": [
+        "MySQL",
+        "Relational Reservation Schemas",
+        "Indexing"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Postman"
+      ]
+    },
+    "architecture": "React Single Page Application ↔ Laravel REST API with Repository & Service Layers ↔ Spatie RBAC ↔ MySQL Database",
+    "coverImage": "/projects/restaurant/restaurant.png",
+    "image": "/projects/restaurant/restaurant.png",
+    "tags": [
+      "Laravel",
+      "PHP",
+      "React.js",
+      "MySQL",
+      "Spatie RBAC"
+    ],
+    "screenshots": [
+      {
+        "url": "/projects/restaurant/restaurant.png",
+        "title": "Restaurant Management & Reservation System"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide dining establishments with a unified platform to coordinate table bookings, live orders, kitchen status, and staff duties.",
+      "targetAudience": "Restaurant owners, floor managers, waitstaff, and kitchen teams.",
+      "problemSolved": "Replaces fragmented manual paper tickets and separate booking systems with synchronized real-time digital tracking."
+    },
+    "requirements": [
+      "Time-slotted table reservation booking with seating availability checks",
+      "Customer ordering workflow tracking order states (Received, Cooking, Ready, Served)",
+      "Strict role-based permissions preventing waitstaff from altering administrative pricing or managerial reports",
+      "Modular backend architecture separating domain business logic from controller request handlers",
+      "Live order updates ensuring kitchen staff and front-of-house operate on identical status data"
+    ],
+    "solution": "Built a centralized web platform with a modular Laravel backend applying the Repository Pattern, strict FormRequest validation, and Spatie RBAC, ensuring reliable data persistence and rapid reservation confirmation.",
+    "features": [
+      "Table reservation management with time-slot booking and seating availability tracking",
+      "Customer order lifecycle management from intake to kitchen and fulfillment",
+      "Customer special request routing and table service alerts",
+      "Role-based access control (RBAC) separating managers, servers, and kitchen staff using Spatie Permission",
+      "Clean architecture leveraging Laravel Repository & Service patterns to maintain thin controllers",
+      "Administrative operations dashboard for revenue summaries, daily orders, and reservation logs"
+    ],
+    "technicalChallenges": [
+      "Preventing double-booking of tables during peak reservation hours with concurrent customer submissions",
+      "Enforcing strict authorization boundaries across varied staff roles without creating spaghetti permission checks",
+      "Designing a clean repository interface that decouples Eloquent ORM operations from domain service logic"
+    ],
+    "implementationDetails": [
+      "Integrated Spatie Laravel-Permission package with custom middleware enforcing role gates on sensitive API routes",
+      "Implemented database transactions during table reservation creation to guarantee atomic seating allocations",
+      "Structured application logic into `ReservationService`, `OrderService`, and repository interfaces",
+      "Standardized all JSON outputs using Laravel API Resources"
+    ],
+    "testingQuality": [
+      "Authorization permission testing ensuring servers cannot access financial reports and customers cannot alter order states",
+      "Concurrency stress testing simulating simultaneous booking requests for identical tables",
+      "API regression testing validating request validation errors for missing or invalid booking times",
+      "Manual floor-plan workflow testing simulating real-time order lifecycle changes"
+    ],
+    "seoGeoAeo": [
+      "Local Business and Restaurant Schema.org structured data markup for Google Local and map discovery",
+      "Location-targeted metadata optimization designed for local culinary and dining searches",
+      "Clean semantic headings and service information structured for voice and AI assistant lookups (GEO/AEO)",
+      "Sitemap integration with canonical URL declarations"
+    ],
+    "performance": [
+      "Eager loading of order items and customer relationship models avoiding N+1 query overhead",
+      "Database indexing on reservation timestamps and status flags for millisecond table queries",
+      "Lightweight React frontend rendering responsive tables and order boards smoothly"
+    ],
+    "security": [
+      "Strict role authorization preventing privilege escalation across staff tiers",
+      "FormRequest validation sanitizing customer notes, table numbers, and contact information",
+      "Secure token storage and encrypted administrative sessions"
+    ],
+    "featured": true,
+    "color": "#f59e0b",
+    "link": null,
+    "githubUrl": null
+  },
+  {
+    "id": "farm-flex-erp",
+    "slug": "farm-flex-erp",
+    "title": "Farm Flex ERP",
+    "category": "ERP / Business System",
+    "shortDescription": "Enterprise business and operations ERP system providing unified inventory tracking, supplier management, employee workflows, and analytical dashboards.",
+    "description": "Farm Flex ERP is an enterprise management system designed to handle daily business operations, inventory movement, supplier workflows, and internal personnel. The architecture prioritizes data integrity, relational reporting, and role-restricted dashboard access.",
+    "role": "Full-Stack Developer (Database Architecture, Business Logic, Inventory Workflows & Dashboard UI)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Vue.js",
+      "React",
+      "MySQL",
+      "REST APIs",
+      "Repository Pattern"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "Service Layer",
+        "Repository Pattern"
+      ],
+      "frontend": [
+        "Vue.js",
+        "React.js",
+        "Tailwind CSS",
+        "Enterprise Dashboard Components"
+      ],
+      "database": [
+        "MySQL",
+        "Normalized Multi-Table Schema",
+        "Complex SQL Aggregations"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Jira",
+        "Trello"
+      ]
+    },
+    "architecture": "Interactive Dashboard SPA ↔ Laravel Modular Enterprise Backend ↔ Service & Repository Abstractions ↔ MySQL Relational Database",
+    "coverImage": "/projects/farm-flex/erp-system.png",
+    "image": "/projects/farm-flex/erp-system.png",
+    "tags": [
+      "Laravel",
+      "Nuxt.js",
+      "PHP",
+      "MySQL",
+      "ERP",
+      "Business Dashboards"
+    ],
+    "screenshots": [
+      {
+        "url": "/projects/farm-flex/erp-system.png",
+        "title": "Farm Flex ERP Business & Inventory Dashboard"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide agricultural and operational businesses with unified oversight over inventory levels, procurement, supplier accounts, and staff.",
+      "targetAudience": "Enterprise operations managers, procurement officers, and inventory supervisors.",
+      "problemSolved": "Eliminates stock discrepancies, delayed supply orders, and disconnected departmental records with a single relational ERP source of truth."
+    },
+    "requirements": [
+      "Real-time inventory tracking with automated low-stock warnings and audit logs",
+      "Supplier management tracking purchase orders, invoices, and fulfillment history",
+      "Departmental employee access control separating warehouse, procurement, and executive users",
+      "High-performance analytical reporting capable of aggregating operational metrics across thousands of records"
+    ],
+    "solution": "Designed and implemented a domain-tailored ERP architecture using Laravel and MySQL with optimized query patterns, automated inventory audits, and role-segregated management screens.",
+    "features": [
+      "Centralized operations dashboard providing real-time operational metrics and KPIs",
+      "Multi-tier inventory tracking and stock movement audits",
+      "Supplier relationship and procurement order lifecycle management",
+      "Employee management, access control, and departmental role assignment",
+      "Optimized database schema handling complex multi-table relational reports with low query latency"
+    ],
+    "technicalChallenges": [
+      "Structuring complex multi-table database relationships across inventory, shipments, suppliers, and purchase orders",
+      "Executing heavy analytical aggregate queries without causing database locking on active inventory operations",
+      "Ensuring historical data immutability for past inventory ledger adjustments"
+    ],
+    "implementationDetails": [
+      "Architected database tables with strict foreign key constraints and audit trail timestamps",
+      "Created dedicated service classes to orchestrate inventory stock deductions upon confirmed dispatch",
+      "Applied database indexing on supplier foreign keys, batch numbers, and stock status codes",
+      "Built clean dashboard summary views providing management with actionable operational insights"
+    ],
+    "testingQuality": [
+      "Integration testing of inventory deductions and restock calculations",
+      "Database constraint testing ensuring orphaned records cannot exist across supplier and order tables",
+      "Role access testing ensuring warehouse operators cannot modify financial procurement agreements",
+      "Data integrity verification under simulated concurrent inventory adjustments"
+    ],
+    "seoGeoAeo": [
+      "Technical B2B enterprise software markup describing inventory and operations capabilities",
+      "Semantic documentation architecture providing clear answers for ERP and business systems queries (AEO)",
+      "Structured entity definitions enabling generative search engines (GEO) to categorize the system as an enterprise platform",
+      "Canonical URL structure and clean search indexing"
+    ],
+    "performance": [
+      "Optimized SQL aggregation queries utilizing index hints and covering indexes for dashboard summaries",
+      "Pagination applied to all large enterprise data tables to keep response payloads small and fast",
+      "Cached daily summary metrics reducing routine server compute load"
+    ],
+    "security": [
+      "Role-Based Access Control restricting sensitive financial and procurement data to authorized executives",
+      "Complete immutable activity audit logs recording employee actions across inventory records",
+      "FormRequest validation preventing parameter tampering on inventory quantities and purchase orders"
+    ],
+    "featured": true,
+    "color": "#10b981",
+    "link": null,
+    "githubUrl": null
+  },
+  {
+    "id": "nexa-event",
+    "slug": "nexa-event",
+    "title": "Nexa Event",
+    "category": "Event & Ticketing Platform",
+    "shortDescription": "Event discovery and digital ticketing system with seat reservation workflows, booking management, user authentication, and secure verification.",
+    "description": "Nexa Event is an online event ticketing and reservation platform that enables users to browse upcoming events, select available seating tiers, and reserve tickets with real-time availability updates.",
+    "role": "Full-Stack Developer (Event Engine, Booking Flow, Concurrency Control & Responsive UI)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Next.js",
+      "React",
+      "REST APIs",
+      "Tailwind CSS",
+      "MySQL"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "Database Transactions",
+        "Ticket Validation Engine"
+      ],
+      "frontend": [
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "Interactive Booking UI"
+      ],
+      "database": [
+        "MySQL",
+        "Event & Tier Schemas",
+        "Seat Allocation Locks"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Vercel"
+      ]
+    },
+    "architecture": "Next.js Event Portal ↔ Laravel RESTful Booking API ↔ Relational Database (Events, Tiers, Seats, Bookings)",
+    "coverImage": "/projects/nexa-event/frame-nexa.png",
+    "image": "/projects/nexa-event/frame-nexa.png",
+    "tags": [
+      "Laravel",
+      "Next.js",
+      "React",
+      "Ticketing",
+      "REST APIs"
+    ],
+    "screenshots": [
+      {
+        "url": "/projects/nexa-event/frame-nexa.png",
+        "title": "Nexa Event Platform Overview & Hero"
+      },
+      {
+        "url": "/projects/nexa-event/nexa.png",
+        "title": "Event Schedule & Ticket Tier Selection"
+      },
+      {
+        "url": "/projects/nexa-event/nexa1.png",
+        "title": "Booking Checkout & Reservation Management"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide event organizers and attendees with an intuitive, reliable digital platform for event discovery and concurrent seat reservations.",
+      "targetAudience": "Event attendees booking tickets and organizers managing venue seat tiers and attendee lists.",
+      "problemSolved": "Eliminates double-booking glitches and seat allocation conflicts during high-traffic ticket sale launches."
+    },
+    "requirements": [
+      "Dynamic event discovery showcase featuring high-res imagery, schedules, and venue information",
+      "Interactive tier selection (VIP, Regular, Early Bird) with real-time seat inventory counters",
+      "Temporary seat reservation locking preventing multiple users from buying the exact same seat simultaneously",
+      "Customer booking management portal allowing users to view and manage confirmed reservations",
+      "Mobile-responsive ticketing workflow accessible across smartphones and desktop computers"
+    ],
+    "solution": "Engineered transactional reservation endpoints using Laravel database locking and validation rules, paired with an intuitive Next.js booking interface that guides users seamlessly through event selection and checkout.",
+    "features": [
+      "Comprehensive event discovery with rich media descriptions, schedules, and venue details",
+      "Interactive ticket selection, seat reservation, and booking pipeline",
+      "User booking management portal for ticket retrieval and status tracking",
+      "Backend REST API handling seat concurrency, ticket inventory locks, and validation",
+      "Responsive modern UI with fluid animations and fast initial load times"
+    ],
+    "technicalChallenges": [
+      "Preventing race conditions when multiple users attempt to reserve the last available ticket tier simultaneously",
+      "Managing temporary reservation expiry timers so unpurchased seats automatically return to public inventory",
+      "Delivering a seamless checkout workflow on mobile devices with zero layout shift"
+    ],
+    "implementationDetails": [
+      "Implemented database row locking (`lockForUpdate`) during checkout confirmation to guarantee seat exclusivity",
+      "Designed clean REST endpoints delivering event details and live ticket counts via Laravel API Resources",
+      "Built an intuitive Next.js booking step-by-step wizard guiding users from event page to confirmed booking",
+      "Applied structured FormRequest validation checking seat availability and user inputs"
+    ],
+    "testingQuality": [
+      "Concurrency testing simulating simultaneous requests attempting to book identical seats",
+      "Booking validation testing ensuring expired reservations release locked seats back to inventory",
+      "Cross-browser and mobile device usability testing validating booking forms across diverse screen sizes",
+      "End-to-end user flow testing: event search → tier selection → seat reservation → confirmation"
+    ],
+    "seoGeoAeo": [
+      "Event Schema.org structured data (dates, location, ticketing offers, performers) for Google Event rich cards",
+      "Local event SEO optimization facilitating discovery for city-specific and regional event searches",
+      "Semantic question-and-answer event data structured for answer engine discovery (AEO/GEO)",
+      "Open Graph event previews for social media sharing"
+    ],
+    "performance": [
+      "Next.js server-side pre-rendering of event detail pages for lightning-fast initial page loads",
+      "Lightweight Tailwind CSS component styling eliminating runtime CSS overhead",
+      "Optimized query caching for high-traffic public event listing endpoints"
+    ],
+    "security": [
+      "Idempotent reservation request handling preventing duplicate ticket charges",
+      "Strict sanitization of user booking details and contact inputs",
+      "Token-based user authentication securing personal booking portals"
+    ],
+    "featured": true,
+    "color": "#ec4899",
+    "link": null,
+    "githubUrl": null,
+    "seoTitle": "Nexa Event | High-Concurrency Event Ticketing Case Study",
+    "seoDescription": "Case study on Nexa Event ticketing architecture: interactive seat reservation maps, distributed Redis hold locks, and signed QR code tickets.",
+    "quickFacts": {
+      "role": "Lead Systems & API Engineer",
+      "systemType": "Event Ticketing & Seat Booking",
+      "backend": "Node.js / Laravel High-Throughput APIs",
+      "frontend": "Next.js Interactive Seat Selection",
+      "database": "PostgreSQL & Redis Hold Engine",
+      "specialized": "Distributed TTL Locks & Cryptographic QR Codes"
+    },
+    "faq": [
+      {
+        "question": "How does Nexa Event prevent duplicate seat purchases during flash sales?",
+        "answer": "Selected seats are placed under distributed Redis locks with a 10-minute TTL hold. The purchase transaction confirms availability atomically before debiting payment."
+      },
+      {
+        "question": "How are event tickets validated at venue gates?",
+        "answer": "Tickets feature cryptographically signed QR codes verified offline or online against the ticket registry to prevent counterfeit duplications."
+      }
+    ],
+    "relatedServices": [
+      "Full-Stack Web Development",
+      "Laravel Backend & REST APIs",
+      "Performance Optimization"
+    ],
+    "relatedProjects": [
+      "lms-mastery",
+      "mou-store"
+    ],
+    "contextualCta": {
+      "heading": "Building a High-Traffic Ticketing or Booking Application?",
+      "description": "I engineer booking platforms with real-time seat locks, zero double-allocation safeguards, and secure QR code ticketing.",
+      "buttonText": "Discuss Your Ticketing System"
+    }
+  },
+  {
+    "id": "lure-multivendor",
+    "slug": "lure-multivendor",
+    "title": "Lure Multi-Vendor E-Commerce",
+    "category": "E-Commerce",
+    "shortDescription": "Full-scale multi-vendor marketplace connecting multiple independent vendors, product catalogs, customer checkouts, and centralized admin governance.",
+    "description": "Lure is a comprehensive multi-vendor e-commerce platform designed to support independent vendor storefronts, consolidated order processing, customer management, and an administrative control panel.",
+    "role": "Full-Stack Developer (Marketplace Architecture & APIs)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "React",
+      "MySQL",
+      "REST APIs",
+      "Tailwind CSS"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "Multi-Vendor Logic"
+      ],
+      "frontend": [
+        "React.js",
+        "Tailwind CSS",
+        "Vendor Portals"
+      ],
+      "database": [
+        "MySQL",
+        "Multi-Tenant Vendor Schemas"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub"
+      ]
+    },
+    "architecture": "Client Web App ↔ Multi-Vendor Laravel REST API ↔ MySQL Database",
+    "coverImage": "/E-commerce.png",
+    "image": "/E-commerce.png",
+    "tags": [
+      "Laravel",
+      "React",
+      "Multi-Vendor",
+      "REST APIs",
+      "MySQL"
+    ],
+    "screenshots": [
+      {
+        "url": "/E-commerce.png",
+        "title": "Multi-Vendor Storefront & Product Grid"
+      }
+    ],
+    "overview": {
+      "purpose": "Enable multiple merchant vendors to list and sell products on a unified marketplace with centralized order fulfillment.",
+      "targetAudience": "Independent vendors and consumer online shoppers.",
+      "problemSolved": "Provides small merchants with enterprise marketplace capabilities without requiring individual e-commerce infrastructure."
+    },
+    "requirements": [
+      "Vendor registration and storefront management",
+      "Unified shopping cart containing items from multiple distinct vendors",
+      "Split-order management routing fulfilled items to respective vendors",
+      "Administrative oversight dashboard"
+    ],
+    "solution": "Engineered a normalized database schema in MySQL with Laravel service classes handling vendor inventory isolation, multi-item checkout splitting, and automated order notifications.",
+    "features": [
+      "Multi-vendor architecture supporting independent vendor profiles and stores",
+      "Vendor catalog and inventory management with commission splits",
+      "Centralized order fulfillment, payment coordination, and customer support",
+      "Administrative oversight dashboard for vendor vetting and catalog control"
+    ],
+    "technicalChallenges": [
+      "Splitting single customer payments across multiple independent vendor order records",
+      "Isolating vendor inventory and sales analytics to prevent cross-merchant data leakage"
+    ],
+    "implementationDetails": [
+      "Built vendor isolation middleware ensuring vendors can only mutate their own product lines",
+      "Implemented transactional order splitting across vendor sub-orders upon checkout confirmation",
+      "Structured clean REST APIs delivering vendor metrics and order fulfillment status"
+    ],
+    "testingQuality": [
+      "Order split testing validating sub-orders match total cart items and pricing",
+      "Vendor permission testing verifying data isolation between competing vendors"
+    ],
+    "seoGeoAeo": [
+      "Marketplace product schema and structured breadcrumb metadata for search engines"
+    ],
+    "performance": [
+      "Eager loading of vendor ratings and product catalog images to minimize query roundtrips"
+    ],
+    "security": [
+      "Strict multi-tenant authorization preventing unauthorized inventory modifications",
+      "Sanitized order notes and payment payload validation"
+    ],
+    "featured": false,
+    "color": "#8b5cf6",
+    "link": null,
+    "githubUrl": null
+  },
+  {
+    "id": "filament-ecommerce",
+    "slug": "filament-ecommerce",
+    "title": "Full-Stack E-Commerce + Filament Dashboard",
+    "category": "Admin & E-Commerce",
+    "shortDescription": "Laravel e-commerce store with an advanced Filament v3 administrative dashboard for managing products, categories, orders, customers, and business metrics.",
+    "description": "An end-to-end e-commerce solution combining customer-facing shopping workflows with a Filament-powered administrative panel for rapid back-office operations.",
+    "role": "Full-Stack Developer (Filament Integration & Backend)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Filament",
+      "MySQL",
+      "Tailwind CSS",
+      "REST APIs"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "Filament v3",
+        "REST APIs"
+      ],
+      "frontend": [
+        "Blade / Tailwind",
+        "React Components"
+      ],
+      "database": [
+        "MySQL",
+        "Order & Inventory Relational Tables"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub"
+      ]
+    },
+    "architecture": "Storefront Frontend ↔ Laravel Application Core ↔ Filament Admin Panel ↔ MySQL Database",
+    "coverImage": "/E-commerce.png",
+    "image": "/E-commerce.png",
+    "tags": [
+      "Laravel",
+      "Filament",
+      "PHP",
+      "Admin Dashboard",
+      "MySQL"
+    ],
+    "screenshots": [
+      {
+        "url": "/E-commerce.png",
+        "title": "Storefront & Catalog"
+      }
+    ],
+    "overview": {
+      "purpose": "Deliver an agile retail store with high-density back-office control over orders, stock, and customer data.",
+      "targetAudience": "E-commerce store operators and customer service administrators.",
+      "problemSolved": "Eliminates weeks of custom CRUD development by leveraging Filament for instant, powerful back-office tables and forms."
+    },
+    "requirements": [
+      "Fast storefront product display and checkout",
+      "Comprehensive admin panel with search, filters, export, and bulk action capabilities",
+      "Order lifecycle tracking from pending payment to fulfillment"
+    ],
+    "solution": "Integrated Filament into the Laravel backend to rapidly produce high-density, searchable admin tables, customizable form schemas, and real-time dashboard analytics.",
+    "features": [
+      "Custom Filament v3 administrative panel for rapid CRUD and data filtering",
+      "Product catalog, inventory tracking, and SKU management",
+      "Order status workflow management (Pending, Paid, Shipped, Delivered)",
+      "Role-based administrative permissions and audit tracking"
+    ],
+    "technicalChallenges": [
+      "Customizing Filament form widgets to match complex product attribute variants",
+      "Maintaining high-speed database queries across large order histories in admin tables"
+    ],
+    "implementationDetails": [
+      "Configured Filament resources with custom table filters and bulk status changers",
+      "Connected order events to automatic inventory decrement listeners"
+    ],
+    "testingQuality": [
+      "Admin form validation testing checking SKU uniqueness and price bounds",
+      "Order status transition testing ensuring orders move forward sequentially"
+    ],
+    "seoGeoAeo": [
+      "Product metadata and clean semantic catalog markup for search visibility"
+    ],
+    "performance": [
+      "Database table indexing on order creation timestamps and status codes"
+    ],
+    "security": [
+      "Dedicated admin authentication guard isolating administrative dashboards from public user routes"
+    ],
+    "featured": false,
+    "color": "#f97316",
+    "link": null,
+    "githubUrl": null
+  },
+  {
+    "id": "golden-plate-apis",
+    "slug": "golden-plate-apis",
+    "title": "Golden Plate REST APIs",
+    "category": "REST API Architecture",
+    "shortDescription": "High-performance Laravel RESTful API backend for restaurant operations, orders, reservations, authentication, and structured API Resources.",
+    "description": "A dedicated backend API service designed to power restaurant customer applications and point-of-sale integrations with strict validation, token-based authentication, and standardized JSON responses.",
+    "role": "Backend API Developer (Architecture, Security & Documentation)",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "REST APIs",
+      "API Resources",
+      "FormRequests"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "API Resources",
+        "Form Requests",
+        "Policies"
+      ],
+      "frontend": [
+        "API Documentation & Contract Schemas"
+      ],
+      "database": [
+        "MySQL",
+        "Relational POS Schemas"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Postman",
+        "Swagger"
+      ]
+    },
+    "architecture": "Client Apps ↔ Laravel REST API Gateway ↔ FormRequest Security & Policy Layer ↔ MySQL Database",
+    "coverImage": "/integration_Api.png",
+    "image": "/integration_Api.png",
+    "tags": [
+      "Laravel",
+      "REST APIs",
+      "PHP",
+      "API Resources",
+      "MySQL"
+    ],
+    "screenshots": [
+      {
+        "url": "/integration_Api.png",
+        "title": "API Architecture & Endpoints"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide consumer mobile and web clients with predictable, ultra-fast API endpoints for restaurant discovery and ordering.",
+      "targetAudience": "Frontend developers, mobile app engineers, and POS integration partners.",
+      "problemSolved": "Eliminates API payload inconsistency, fragile endpoints, and untyped error handling."
+    },
+    "requirements": [
+      "Strict RESTful endpoint semantics (GET, POST, PUT, DELETE)",
+      "Standardized JSON API Resource formatting across all responses",
+      "Granular input validation with structured, informative error responses",
+      "Token-based authentication for secure customer sessions"
+    ],
+    "solution": "Structured the entire API layer around Laravel API Resources and custom FormRequests, delivering typed and predictable payloads across all HTTP statuses.",
+    "features": [
+      "RESTful endpoint design following industry standards and HTTP verb semantics",
+      "Laravel API Resources for consistent, predictable JSON response formatting",
+      "Strict input validation and error feedback using FormRequests",
+      "Policy-based authorization ensuring data security across endpoints"
+    ],
+    "technicalChallenges": [
+      "Standardizing error payloads across authentication failures, validation errors, and domain exceptions",
+      "Optimizing response serialization overhead on large menu catalogs"
+    ],
+    "implementationDetails": [
+      "Created centralized API response traits ensuring identical JSON envelopment across all controllers",
+      "Enforced FormRequest classes for every mutation endpoint"
+    ],
+    "testingQuality": [
+      "Automated HTTP Feature testing verifying endpoint status codes (200, 201, 401, 403, 422)",
+      "Schema validation testing ensuring JSON attributes conform to expected mobile consumer models"
+    ],
+    "seoGeoAeo": [
+      "Technical API documentation structured for search engines and developer discoverability"
+    ],
+    "performance": [
+      "Database query caching for static restaurant menu sections",
+      "Optimized JSON serialization minimizing bandwidth consumption on mobile networks"
+    ],
+    "security": [
+      "Sanitized inputs preventing SQL injection and parameter manipulation",
+      "Rate-limiting applied to public authentication endpoints to mitigate brute-force attempts"
+    ],
+    "featured": false,
+    "color": "#eab308",
+    "link": null,
+    "githubUrl": null
+  },
+  {
+    "id": "portfolio-website",
+    "slug": "portfolio-website",
+    "title": "Personal Portfolio Website",
+    "category": "Full-Stack Portfolio",
+    "shortDescription": "Modern, high-performance portfolio website built with Next.js 15, App Router, GSAP animations, and Tailwind CSS.",
+    "description": "A high-performance technical portfolio showcasing full-stack applications, interactive case studies, and engineering capabilities with responsive design and modern web standards.",
+    "role": "Frontend & Full-Stack Developer",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "GSAP",
+      "App Router"
+    ],
+    "techGrouped": {
+      "backend": [
+        "Next.js App Router",
+        "Server Components",
+        "Edge API Routes"
+      ],
+      "frontend": [
+        "Next.js",
+        "React 19",
+        "Tailwind CSS",
+        "GSAP ScrollTrigger"
+      ],
+      "database": [
+        "JSON Structured Data Single Source of Truth"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "Web3Forms"
+      ]
+    },
+    "architecture": "Next.js Static Generation (SSG) ↔ Serverless Edge API ↔ Web3Forms Integration",
+    "coverImage": "/portfolio.png",
+    "image": "/portfolio.png",
+    "tags": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "GSAP",
+      "App Router"
+    ],
+    "screenshots": [
+      {
+        "url": "/portfolio.png",
+        "title": "Portfolio Desktop Presentation"
+      }
+    ],
+    "overview": {
+      "purpose": "Showcase real full-stack systems, architectural depth, and engineering credibility for high-ticket freelance client acquisition.",
+      "targetAudience": "Freelance clients, tech startups, business founders, and engineering managers looking for top-tier full-stack talent.",
+      "problemSolved": "Replaces generic template portfolios with an authentic, deep-dive case study platform demonstrating real system design and execution."
+    },
+    "requirements": [
+      "Fast static page generation with near-instant client page transitions",
+      "Statically pre-rendered case study detail pages for every project",
+      "Modern, polished dark design language with subtle hardware-accelerated animations",
+      "Complete Technical SEO, Local SEO, and GEO/AEO optimization"
+    ],
+    "solution": "Built a custom, lightweight Next.js platform that highlights real full-stack systems, architectural data flows, and technical problem-solving.",
+    "features": [
+      "Next.js App Router with static generation for optimal Core Web Vitals",
+      "Hardware-accelerated GSAP ScrollTrigger animations",
+      "Dynamic case study generation for all featured systems",
+      "Clean dark mode aesthetic with accessible contrast and typography"
+    ],
+    "technicalChallenges": [
+      "Maintaining zero hydration errors across Next.js 15 and GSAP context lifecycle",
+      "Designing responsive case study layouts that render flawlessly across all mobile screen widths"
+    ],
+    "implementationDetails": [
+      "Configured `generateStaticParams()` to pre-render all project routes at build time",
+      "Created reusable case study components reading from unified `projects.json`",
+      "Implemented comprehensive Schema.org JSON-LD structured data"
+    ],
+    "testingQuality": [
+      "ESLint code quality checks with zero lint warnings or errors",
+      "Static build verification verifying 100% route prerendering",
+      "Mobile and tablet viewport testing with zero horizontal overflow"
+    ],
+    "seoGeoAeo": [
+      "Complete Technical SEO: canonical URLs, XML sitemaps, robots.txt, semantic HTML5",
+      "Generative Engine Optimization (GEO) with explicit entity definition for AI search engines",
+      "Answer Engine Optimization (AEO) with structured direct answers to technical queries"
+    ],
+    "performance": [
+      "100% static HTML generation (SSG) delivering sub-second initial server responses",
+      "Optimized image loading via Next/Image with responsive srcset definitions",
+      "Purged all unnecessary bundle weights and heavy dependencies"
+    ],
+    "security": [
+      "Server-side contact API proxying with environment variable access key shielding",
+      "Sanitized contact inputs preventing email injection"
+    ],
+    "featured": false,
+    "color": "#aa895f",
+    "link": "https://seif-aldin-dev.vercel.app",
+    "githubUrl": "https://github.com/SeifEldin0"
+  },
+  {
+    "id": "ai-chat-integration",
+    "slug": "ai-chat-integration",
+    "title": "AI Chat Integration",
+    "category": "AI / ML Integration",
+    "shortDescription": "Dynamic AI assistant interface integrated with Google Gemini API for intelligent, contextual user conversations.",
+    "description": "Interactive chatbot application demonstrating third-party LLM API integration with streaming responses and modern chat interface components.",
+    "role": "Frontend Developer & API Integration",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Gemini API",
+      "Tailwind CSS",
+      "REST APIs"
+    ],
+    "techGrouped": {
+      "backend": [
+        "REST APIs",
+        "Gemini API Gateway"
+      ],
+      "frontend": [
+        "React.js",
+        "Tailwind CSS",
+        "Chat Interface"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Vercel"
+      ]
+    },
+    "architecture": "React Client ↔ Gemini API Gateway",
+    "coverImage": "/integration_Api.png",
+    "image": "/integration_Api.png",
+    "tags": [
+      "React",
+      "Gemini AI",
+      "API Integration",
+      "Tailwind CSS"
+    ],
+    "screenshots": [
+      {
+        "url": "/integration_Api.png",
+        "title": "AI Chat Interface & Responses"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide users with an intelligent, conversational interface powered by large language models.",
+      "targetAudience": "Users requiring quick, accurate automated answers to diverse queries.",
+      "problemSolved": "Demonstrates robust API integration, asynchronous state management, and conversational UI design."
+    },
+    "requirements": [
+      "Low-latency response handling for dynamic user prompts",
+      "Clean conversational UI with message bubbles and auto-scroll",
+      "Resilient error recovery when API limits or network issues occur"
+    ],
+    "solution": "Implemented a modular React interface with resilient error handling and prompt templates to produce coherent, responsive conversations.",
+    "features": [
+      "Contextual query answering powered by Gemini API",
+      "Dynamic streaming chat interface with prompt suggestions",
+      "Responsive layout optimized for mobile and desktop screens"
+    ],
+    "technicalChallenges": [
+      "Handling asynchronous network timeouts and providing clean visual fallback states",
+      "Maintaining smooth auto-scrolling during streaming response chunks"
+    ],
+    "implementationDetails": [
+      "Encapsulated Gemini API communication in dedicated service utility functions",
+      "Built responsive chat bubble components with markdown rendering support"
+    ],
+    "testingQuality": [
+      "Prompt edge-case testing checking empty, malformed, and oversized inputs",
+      "Network failure simulation verifying retry and error notifications"
+    ],
+    "seoGeoAeo": [
+      "Structured documentation on AI chatbot integration patterns"
+    ],
+    "performance": [
+      "Debounced prompt inputs and lightweight React state trees"
+    ],
+    "security": [
+      "Client input sanitization and secure API key shielding"
+    ],
+    "featured": false,
+    "color": "#60a5fa",
+    "link": "https://ai-liard-kappa.vercel.app/",
+    "githubUrl": null
+  },
+  {
+    "id": "ecommerce-platform",
+    "slug": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "category": "E-Commerce",
+    "shortDescription": "Modern online store application built with React, Vite, and Tailwind CSS featuring product catalogs and cart workflows.",
+    "description": "An interactive e-commerce web application featuring real-time product browsing, interactive cart additions, and responsive checkout views.",
+    "role": "Frontend Developer",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    "techGrouped": {
+      "frontend": [
+        "React.js",
+        "Vite",
+        "Tailwind CSS"
+      ],
+      "toolsDevOps": [
+        "Git",
+        "GitHub",
+        "Vercel"
+      ]
+    },
+    "architecture": "Vite React SPA ↔ REST API",
+    "coverImage": "/E-commerce.png",
+    "image": "/E-commerce.png",
+    "tags": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Cart"
+    ],
+    "screenshots": [
+      {
+        "url": "/E-commerce.png",
+        "title": "Storefront Interface"
+      }
+    ],
+    "overview": {
+      "purpose": "Provide shoppers with a fast, lightweight online catalog for product discovery and cart management.",
+      "targetAudience": "Digital retail consumers.",
+      "problemSolved": "Delivers an instant-loading, snappy single-page shopping experience."
+    },
+    "requirements": [
+      "Instant product filtering by category and price",
+      "Dynamic cart badge and persistent checkout items",
+      "Responsive mobile-friendly product grid"
+    ],
+    "solution": "Built a lightweight React SPA with atomic components and Tailwind utility classes for high-speed browsing.",
+    "features": [
+      "Fast client-side routing and instant filtering",
+      "Interactive cart with dynamic quantity adjustments",
+      "Responsive product grids with image previews"
+    ],
+    "technicalChallenges": [
+      "Optimizing client-side product search across extensive item lists"
+    ],
+    "implementationDetails": [
+      "Built atomic product card components with memoized state handlers"
+    ],
+    "testingQuality": [
+      "Cart state testing confirming item additions, quantity changes, and removals"
+    ],
+    "seoGeoAeo": [
+      "Semantic HTML product markup and clear image alt tags"
+    ],
+    "performance": [
+      "Vite fast bundle compilation and optimized assets"
+    ],
+    "security": [
+      "Sanitized client-side form inputs"
+    ],
+    "featured": false,
+    "color": "#a855f7",
+    "link": "https://e-commerce-project-hq65-git-main-seifeldin0s-projects.vercel.app",
+    "githubUrl": null
+  }
+]

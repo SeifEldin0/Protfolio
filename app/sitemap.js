@@ -1,9 +1,18 @@
 // app/sitemap.js
+import projects from "@/data/projects.json";
+
 const siteUrl = "https://seif-aldin-dev.vercel.app";
 
 export default function sitemap() {
   const lastModified = new Date().toISOString();
-  
+
+  const projectRoutes = projects.map((project) => ({
+    url: `${siteUrl}/projects/${project.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: project.featured ? 0.9 : 0.7,
+  }));
+
   return [
     {
       url: siteUrl,
@@ -11,23 +20,6 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 1.0,
     },
-    {
-      url: `${siteUrl}/#about`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/#projects`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/#contact`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    ...projectRoutes,
   ];
 }

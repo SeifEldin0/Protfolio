@@ -15,18 +15,33 @@ const Navbar = () => {
   const menuRef = useRef(null);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   useEffect(() => {
-    // Quick entrance animation
-    gsap.fromTo([logoRef.current, ...linksRef.current], 
-      { y: -15, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 0.4, stagger: 0.05, ease: "power2.out", delay: 0.1 }
-    );
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      gsap.set([logoRef.current, ...linksRef.current], { y: 0, opacity: 1 });
+    } else {
+      gsap.fromTo(
+        [logoRef.current, ...linksRef.current],
+        { y: -15, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.4,
+          stagger: 0.05,
+          ease: "power2.out",
+          delay: 0.1,
+        }
+      );
+    }
 
     // Scroll handler with throttle
     let ticking = false;
@@ -36,7 +51,7 @@ const Navbar = () => {
           setIsScrolled(window.scrollY > 30);
           
           // Update active section
-          const sections = navLinks.map(link => link.href.slice(1));
+          const sections = navLinks.map(link => link.href.split("#")[1]);
           for (const section of sections.reverse()) {
             const element = document.getElementById(section);
             if (element) {
@@ -58,9 +73,14 @@ const Navbar = () => {
   }, []);
 
   const handleNavClick = (e, href) => {
-    e.preventDefault();
     setIsOpen(false);
-    const element = document.querySelector(href);
+    if (typeof window !== "undefined" && window.location.pathname !== "/") {
+      // Let standard navigation navigate to homepage with hash
+      return;
+    }
+    e.preventDefault();
+    const targetId = href.includes("#") ? `#${href.split("#")[1]}` : href;
+    const element = document.querySelector(targetId);
     if (element) {
       const offset = 70;
       const elementPosition = element.getBoundingClientRect().top;
@@ -115,8 +135,8 @@ const Navbar = () => {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-150 ${
                   activeSection === link.href.slice(1)
-                    ? "text-white bg-white/[0.06]"
-                    : "text-white/50 hover:text-white/80"
+                    ? "text-white bg-white/[0.08]"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.name}

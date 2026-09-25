@@ -7,7 +7,7 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/admin/", "/_next/static/"],
+        disallow: ["/api/"],
       },
       {
         userAgent: "Googlebot",

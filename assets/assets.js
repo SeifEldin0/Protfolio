@@ -116,22 +116,22 @@ export const serviceData = [
       "Implemented an AI-powered chatbot using Gemini API to generate answers dynamically based on user input.",
     link: "https://ai-liard-kappa.vercel.app/",
   },
-  {
-    icon: assets.prayrtime_icon,
-    title: "Prayer Time App",
-    image: "/prayrtime_icon.png",
-    description:
-      "Displays accurate prayer times using real-time API with a countdown timer and responsive design.",
-    link: "https://prayer-time-tau.vercel.app/",
-  },
-  {
-    icon: assets.Weatherapp_icon,
-    title: "Weather App",
-    image: "/Weatherapp_icon.png",
-    description:
-      "Built with weather API to show live weather updates by city, including temperature, humidity, and icon.",
-    link: "https://weather-app-six-weld-42.vercel.app/",
-  },
+  // {
+  //   icon: assets.prayrtime_icon,
+  //   title: "Prayer Time App",
+  //   image: "/prayrtime_icon.png",
+  //   description:
+  //     "Displays accurate prayer times using real-time API with a countdown timer and responsive design.",
+  //   link: "https://prayer-time-tau.vercel.app/",
+  // },
+  // {
+  //   icon: assets.Weatherapp_icon,
+  //   title: "Weather App",
+  //   image: "/Weatherapp_icon.png",
+  //   description:
+  //     "Built with weather API to show live weather updates by city, including temperature, humidity, and icon.",
+  //   link: "https://weather-app-six-weld-42.vercel.app/",
+  // },
 ];
 
 export const infoList = [

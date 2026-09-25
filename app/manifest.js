@@ -1,13 +1,13 @@
 export default function manifest() {
   return {
-    name: "Seif Eldin | Full-Stack Developer",
-    short_name: "Seif Eldin",
+    name: "Seif Aldin | Full-Stack Software Developer",
+    short_name: "Seif Aldin",
     description:
-      "Full-stack web developer crafting performant Next.js frontends and scalable Laravel/REST backends.",
+      "Full-Stack Software Developer building scalable web and mobile applications, REST APIs, e-commerce platforms, ERP systems, and AI-integrated applications with Laravel, React, and Next.js.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    background_color: "#0a0a0b",
+    theme_color: "#0a0a0b",
     icons: [
       {
         src: "/icon.png",

@@ -2,11 +2,10 @@ import { Outfit, Ovo, Exo_2, Cairo } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://seif-aldin-dev.vercel.app";
-const siteName = "Seif Aldin Portfolio";
-const siteTitle =
-  "Seif Aldin | Full-Stack Developer | React, Next.js & Laravel Expert";
+const siteName = "Seif Eldin Portfolio";
+const siteTitle = "Seif Eldin | Full-Stack Web & Mobile Developer";
 const siteDescription =
-  "Seif Aldin (سيف الدين) is a professional Full-Stack Developer, specializing in Next.js, React, and Laravel. Building high-performance, scalable web applications for clients worldwide. Available for freelance projects.";
+  "Full-Stack Software Developer building scalable web and mobile applications, REST APIs, e-commerce platforms, ERP systems, and AI-integrated applications with Laravel, React, and Next.js.";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -44,7 +43,24 @@ export const metadata = {
   },
   description: siteDescription,
   keywords: [
-    // English Keywords
+    "Full-Stack Web Developer",
+    "Laravel Developer",
+    "PHP Developer",
+    "React Developer",
+    "Next.js Developer",
+    "REST API Developer",
+    "E-commerce Developer",
+    "ERP Developer",
+    "Seif Aldin",
+    "Seif Mostafa",
+    "Filament Developer",
+    "Full Stack Developer Egypt",
+    "Freelance Web Developer",
+    "سيف الدين",
+    "مطور فول ستاك",
+    "مطور لارافيل",
+    "مطور ريأكت",
+    "مطور نكست جي اس",
     "Seif Aldin",
     "seif",
     "saif",
@@ -265,9 +281,9 @@ export const metadata = {
     "مطور مواقع مستقل محترف فريلانس عربي إنجليزي مصر القاهرة العربية الإنجليزية العالمية المحترف الماهر المبدع المبتكر المتقن المتفوق المتقدم الرائع الممتاز المتميز الفريد الفذ الرائد المبدع المبتكر الخبير المحترف المتقن المتفوق المتقدم الرائع الممتاز",
     "مطور مواقع مستقل محترف فريلانس عربي إنجليزي مصر القاهرة العربية الإنجليزية العالمية المحترف الماهر المبدع المبتكر المتقن المتفوق المتقدم الرائع الممتاز المتميز الفريد الفذ الرائد المبدع المبتكر الخبير المحترف المتقن المتفوق المتقدم الرائع الممتاز",
   ],
-  authors: [{ name: "Seif Aldin", url: siteUrl }],
-  creator: "Seif Aldin",
-  publisher: "Seif Aldin",
+  authors: [{ name: "Seif Eldin", url: siteUrl }],
+  creator: "Seif Eldin",
+  publisher: "Seif Eldin",
   alternates: {
     canonical: siteUrl,
     languages: {
@@ -304,14 +320,8 @@ export const metadata = {
         url: `${siteUrl}/profile-img.jpg`,
         width: 1200,
         height: 630,
-        alt: "Seif Aldin - Full-Stack Web Developer Portfolio",
+        alt: "Seif Aldin - Full-Stack Web & Mobile Developer Portfolio",
         type: "image/jpeg",
-      },
-      {
-        url: `${siteUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "Seif Aldin Portfolio",
       },
     ],
   },
@@ -321,14 +331,11 @@ export const metadata = {
     creator: "@seifaldin_dev",
     title: siteTitle,
     description: siteDescription,
-    images: {
-      url: `${siteUrl}/profile-img.jpg`,
-      alt: "Seif Aldin - Full-Stack Developer",
-    },
+    images: [`${siteUrl}/profile-img.jpg`],
   },
   appleWebApp: {
     capable: true,
-    title: "Seif Aldin",
+    title: "Seif Eldin",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
@@ -349,7 +356,7 @@ export default function RootLayout({ children }) {
       {
         "@type": "Person",
         "@id": `${siteUrl}/#person`,
-        name: "Seif Aldin",
+        name: "Seif Eldin",
         alternateName: [
           "Seif Eldin",
           "سيف الدين",
@@ -358,7 +365,7 @@ export default function RootLayout({ children }) {
         ],
         givenName: "Seif",
         familyName: "Aldin",
-        jobTitle: "Full-Stack Web Developer",
+        jobTitle: "Full-Stack Software Developer (Web & Mobile)",
         description: siteDescription,
         url: siteUrl,
         image: {
@@ -373,20 +380,28 @@ export default function RootLayout({ children }) {
           "https://github.com/SeifEldin0",
         ],
         knowsAbout: [
-          "React",
+          "Web Development",
+          "Mobile Application Development",
+          "React.js",
           "Next.js",
           "Laravel",
           "PHP",
           "JavaScript",
           "TypeScript",
           "Tailwind CSS",
-          "Node.js",
           "MySQL",
-          "MongoDB",
-          "REST API",
-          "Web Development",
-          "Frontend Development",
-          "Backend Development",
+          "PostgreSQL",
+          "REST APIs",
+          "FastAPI",
+          "Python",
+          "Socket.IO",
+          "Filament",
+          "Application Testing & QA",
+          "Performance Optimization",
+          "Technical SEO",
+          "Local SEO",
+          "Generative Engine Optimization (GEO)",
+          "Answer Engine Optimization (AEO)",
         ],
         knowsLanguage: ["English", "Arabic"],
         nationality: { "@type": "Country", name: "Egypt" },
@@ -425,44 +440,56 @@ export default function RootLayout({ children }) {
       {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}/#service`,
-        name: "Seif Aldin - Web Development Services",
+        name: "Seif Aldin - Software Engineering Services",
         description:
-          "Professional web development services including React, Next.js, Laravel applications, and full-stack solutions.",
+          "Professional software engineering services including full-stack web and mobile application development, Laravel backends, REST APIs, testing & QA, and SEO/GEO/AEO optimization.",
         provider: { "@id": `${siteUrl}/#person` },
         areaServed: { "@type": "GeoCircle", name: "Worldwide" },
         serviceType: [
-          "Web Development",
-          "Frontend Development",
-          "Backend Development",
-          "Full-Stack Development",
-          "React Development",
-          "Next.js Development",
-          "Laravel Development",
-          "API Development",
+          "Full-Stack Web Development",
+          "Mobile Application Development",
+          "Backend & REST API Development",
+          "E-Commerce Solutions",
+          "ERP & Business Systems",
+          "LMS / EdTech Platforms",
+          "Admin Dashboard Development",
+          "Application Testing & QA",
+          "Performance Optimization",
+          "Technical SEO",
+          "Local SEO",
+          "Generative Engine Optimization (GEO)",
+          "Answer Engine Optimization (AEO)",
         ],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "Web Development Services",
+          name: "Software Engineering & Lifecycle Services",
           itemListElement: [
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Custom Web Application Development",
+                name: "Full-Stack Web & Mobile Development",
               },
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "E-commerce Solutions",
+                name: "Laravel Backend & REST API Engineering",
               },
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "API Development & Integration",
+                name: "Application Testing & QA",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Technical SEO, GEO & AEO Optimization",
               },
             },
           ],

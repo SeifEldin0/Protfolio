@@ -12,9 +12,22 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      gsap.set([".contact-header > *", ".contact-card", formRef.current], {
+        opacity: 1,
+        y: 0,
+      });
+      return;
+    }
+
     const ctx = gsap.context(() => {
       // Header animation
-      gsap.fromTo(".contact-header > *",
+      gsap.fromTo(
+        ".contact-header > *",
         { opacity: 0, y: 20 },
         {
           opacity: 1,
@@ -25,13 +38,14 @@ const Contact = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Contact cards
-      gsap.fromTo(".contact-card",
+      gsap.fromTo(
+        ".contact-card",
         { opacity: 0, y: 20 },
         {
           opacity: 1,
@@ -42,13 +56,14 @@ const Contact = () => {
           scrollTrigger: {
             trigger: ".contact-grid",
             start: "top 85%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
       // Form animation
-      gsap.fromTo(formRef.current,
+      gsap.fromTo(
+        formRef.current,
         { opacity: 0, y: 20 },
         {
           opacity: 1,
@@ -58,8 +73,8 @@ const Contact = () => {
           scrollTrigger: {
             trigger: formRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }, sectionRef);
@@ -73,17 +88,22 @@ const Contact = () => {
     setResult("");
 
     const formData = new FormData(event.target);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
+    const name = formData.get("name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+    const payload = {
+      name,
+      email,
+      message,
     };
 
+    // Attempt 1: Next.js API route (/api/contact)
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       const resultData = await response.json();
@@ -91,11 +111,41 @@ const Contact = () => {
       if (resultData.success) {
         setResult("success");
         event.target.reset();
+        setIsSubmitting(false);
+        return;
+      }
+    } catch (apiErr) {
+      console.warn("API route failed, trying direct client submission fallback:", apiErr);
+    }
+
+    // Attempt 2: Direct Web3Forms submission from browser (resilient client-side fallback)
+    try {
+      const directResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "a00ebde6-975a-4136-b70d-1d5a2a2b6530",
+          name,
+          email,
+          message,
+          subject: `Portfolio Contact Inquiry from ${name}`,
+          from_name: "Portfolio Contact Form",
+        }),
+      });
+
+      const directData = await directResponse.json();
+
+      if (directData.success) {
+        setResult("success");
+        event.target.reset();
       } else {
         setResult("error");
       }
-    } catch (error) {
-      console.error("Client Error:", error);
+    } catch (directErr) {
+      console.error("Direct Web3Forms submission failed:", directErr);
       setResult("error");
     } finally {
       setIsSubmitting(false);
@@ -147,8 +197,8 @@ const Contact = () => {
           <h2 className="section-title">
             Let's <span className="text-gradient">Collaborate</span>
           </h2>
-          <p className="section-description mx-auto text-sm md:text-base">
-            Have a project in mind? Let's create something great together.
+          <p className="section-description mx-auto text-sm md:text-base text-white/70">
+            Have a project in mind? Let's engineer a scalable, reliable solution together.
           </p>
         </div>
 
@@ -161,16 +211,16 @@ const Contact = () => {
                 href={method.href}
                 target={method.href.startsWith("http") ? "_blank" : undefined}
                 rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="contact-card group flex items-center gap-3 p-4 rounded-xl bg-[#141416] border border-white/[0.05] hover:border-[#708f96]/30 transition-all duration-150"
+                className="contact-card group flex items-center gap-3 p-4 rounded-xl bg-[#141416] border border-white/[0.06] hover:border-[#708f96]/40 transition-all duration-150 min-h-[56px]"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/[0.04] flex items-center justify-center text-white/60 group-hover:text-[#708f96] transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-white/[0.04] flex items-center justify-center text-white/70 group-hover:text-[#708f96] transition-colors">
                   {method.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[10px] text-white/40 uppercase tracking-wider">{method.label}</span>
-                  <p className="text-sm text-white/80 truncate">{method.value}</p>
+                  <span className="text-[10px] text-white/50 uppercase tracking-wider font-semibold">{method.label}</span>
+                  <p className="text-sm text-white/90 truncate">{method.value}</p>
                 </div>
-                <svg className="w-4 h-4 text-white/20 group-hover:text-white/50 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-white/30 group-hover:text-white/70 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
@@ -192,47 +242,57 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={onSubmit}
-            className="lg:col-span-3 p-5 md:p-6 rounded-2xl bg-[#141416] border border-white/[0.05]"
+            className="lg:col-span-3 p-5 md:p-6 rounded-2xl bg-[#141416] border border-white/[0.06]"
+            aria-label="Contact inquiry form"
           >
-            <h3 className="text-lg font-medium text-white mb-5">Send a message</h3>
+            <h3 className="text-lg font-semibold text-white mb-5">Send a message</h3>
 
             <div className="space-y-4">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-xs text-white/40 mb-1.5">Name</label>
+                <label htmlFor="name" className="block text-xs text-white/70 font-medium mb-1.5">
+                  Name <span className="text-amber-400">*</span>
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
+                  aria-required="true"
                   placeholder="Your name"
-                  className="w-full px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.06] focus:border-[#708f96]/50 outline-none text-sm text-white placeholder:text-white/30 transition-colors duration-150"
+                  className="w-full min-h-[44px] px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] outline-none text-sm text-white placeholder:text-white/30 transition-colors duration-150"
                 />
               </div>
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-xs text-white/40 mb-1.5">Email</label>
+                <label htmlFor="email" className="block text-xs text-white/70 font-medium mb-1.5">
+                  Email <span className="text-amber-400">*</span>
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
+                  aria-required="true"
                   placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.06] focus:border-[#708f96]/50 outline-none text-sm text-white placeholder:text-white/30 transition-colors duration-150"
+                  className="w-full min-h-[44px] px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] outline-none text-sm text-white placeholder:text-white/30 transition-colors duration-150"
                 />
               </div>
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-xs text-white/40 mb-1.5">Message</label>
+                <label htmlFor="message" className="block text-xs text-white/70 font-medium mb-1.5">
+                  Message <span className="text-amber-400">*</span>
+                </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   required
-                  placeholder="Tell me about your project..."
-                  className="w-full px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.06] focus:border-[#708f96]/50 outline-none text-sm text-white placeholder:text-white/30 resize-none transition-colors duration-150"
+                  aria-required="true"
+                  placeholder="Tell me about your project, timeline, and requirements..."
+                  className="w-full px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] outline-none text-sm text-white placeholder:text-white/30 resize-none transition-colors duration-150"
                 />
               </div>
 
@@ -240,7 +300,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 px-6 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#708f96] to-[#aa895f] hover:opacity-90 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-150 flex items-center justify-center gap-2"
+                className="w-full min-h-[46px] py-3 px-6 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#708f96] to-[#aa895f] hover:opacity-90 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
@@ -262,20 +322,20 @@ const Contact = () => {
 
               {/* Result Messages */}
               {result === "success" && (
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div role="status" aria-live="polite" className="flex items-center gap-2 p-3.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm">
+                  <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Message sent! I'll reply soon.</span>
+                  <span>Message sent successfully! I'll reply to your email shortly.</span>
                 </div>
               )}
 
               {result === "error" && (
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div role="alert" aria-live="assertive" className="flex items-center gap-2 p-3.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                  <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span>Something went wrong. Try again.</span>
+                  <span>Something went wrong sending your message. Please reach out directly at seifeldinmostafa515@gmail.com</span>
                 </div>
               )}
             </div>
