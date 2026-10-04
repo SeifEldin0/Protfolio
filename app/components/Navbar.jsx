@@ -68,8 +68,18 @@ const Navbar = () => {
       }
     };
 
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const handleNavClick = (e, href) => {
@@ -156,10 +166,12 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] active:scale-95 transition-transform"
-            aria-label="Toggle menu"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] active:scale-95 transition-transform focus-visible:ring-2 focus-visible:ring-[#708f96] outline-none"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
-            <div className="relative w-5 h-3.5 flex flex-col justify-between">
+            <div className="relative w-5 h-3.5 flex flex-col justify-between" aria-hidden="true">
               <span className={`w-full h-0.5 bg-white rounded-full transition-all duration-200 origin-left ${isOpen ? "rotate-45 w-5" : ""}`} />
               <span className={`w-full h-0.5 bg-white rounded-full transition-all duration-200 ${isOpen ? "opacity-0" : ""}`} />
               <span className={`w-full h-0.5 bg-white rounded-full transition-all duration-200 origin-left ${isOpen ? "-rotate-45 w-5" : ""}`} />
@@ -170,7 +182,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         ref={menuRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation menu"
+        aria-hidden={!isOpen}
         className={`fixed inset-0 z-40 bg-[#0a0a0b]/95 backdrop-blur-lg md:hidden transition-all duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
