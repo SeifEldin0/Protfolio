@@ -94,10 +94,41 @@ const Projects = () => {
           </p>
 
           {/* Filter Tabs: Featured vs All */}
-          <div className="inline-flex p-1 rounded-xl bg-white/[0.04] border border-white/[0.08] mt-6 sm:mt-8">
+          <div
+            role="tablist"
+            aria-label="Filter projects"
+            className="inline-flex p-1 rounded-xl bg-white/[0.04] border border-white/[0.08] mt-6 sm:mt-8"
+            onKeyDown={(e) => {
+              let targetId = null;
+              if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                e.preventDefault();
+                const nextTab = activeTab === "featured" ? "all" : "featured";
+                setActiveTab(nextTab);
+                targetId = `tab-${nextTab}`;
+              } else if (e.key === "Home") {
+                e.preventDefault();
+                setActiveTab("featured");
+                targetId = "tab-featured";
+              } else if (e.key === "End") {
+                e.preventDefault();
+                setActiveTab("all");
+                targetId = "tab-all";
+              }
+              if (targetId) {
+                requestAnimationFrame(() => {
+                  document.getElementById(targetId)?.focus();
+                });
+              }
+            }}
+          >
             <button
+              id="tab-featured"
+              role="tab"
+              aria-selected={activeTab === "featured"}
+              aria-controls="projects-grid"
+              tabIndex={activeTab === "featured" ? 0 : -1}
               onClick={() => setActiveTab("featured")}
-              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] ${
+              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] focus-visible:ring-2 focus-visible:ring-[#708f96] outline-none ${
                 activeTab === "featured"
                   ? "bg-white/[0.1] text-white shadow-sm"
                   : "text-white/60 hover:text-white"
@@ -106,8 +137,13 @@ const Projects = () => {
               Featured Systems ({projectsData.filter((p) => p.featured).length})
             </button>
             <button
+              id="tab-all"
+              role="tab"
+              aria-selected={activeTab === "all"}
+              aria-controls="projects-grid"
+              tabIndex={activeTab === "all" ? 0 : -1}
               onClick={() => setActiveTab("all")}
-              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] ${
+              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] focus-visible:ring-2 focus-visible:ring-[#708f96] outline-none ${
                 activeTab === "all"
                   ? "bg-white/[0.1] text-white shadow-sm"
                   : "text-white/60 hover:text-white"
@@ -119,7 +155,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="projects-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div id="projects-grid" className="projects-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {displayedProjects.map((project, index) => (
             <div
               key={project.id || index}
