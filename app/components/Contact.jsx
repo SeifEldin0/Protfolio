@@ -260,7 +260,7 @@ const Contact = () => {
                   required
                   aria-required="true"
                   placeholder="Your name"
-                  className="w-full min-h-[44px] px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] outline-none text-sm text-white placeholder:text-white/30 transition-colors duration-150"
+                  className="w-full min-h-[44px] px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] focus-visible:ring-2 focus-visible:ring-[#708f96]/50 outline-none text-sm text-white placeholder:text-white/30 transition-all duration-150"
                 />
               </div>
 
@@ -276,7 +276,7 @@ const Contact = () => {
                   required
                   aria-required="true"
                   placeholder="your@email.com"
-                  className="w-full min-h-[44px] px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] outline-none text-sm text-white placeholder:text-white/30 transition-colors duration-150"
+                  className="w-full min-h-[44px] px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] focus-visible:ring-2 focus-visible:ring-[#708f96]/50 outline-none text-sm text-white placeholder:text-white/30 transition-all duration-150"
                 />
               </div>
 
@@ -292,7 +292,7 @@ const Contact = () => {
                   required
                   aria-required="true"
                   placeholder="Tell me about your project, timeline, and requirements..."
-                  className="w-full px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] outline-none text-sm text-white placeholder:text-white/30 resize-none transition-colors duration-150"
+                  className="w-full px-4 py-3 rounded-lg bg-white/[0.03] border border-white/[0.08] focus:border-[#708f96] focus-visible:ring-2 focus-visible:ring-[#708f96]/50 outline-none text-sm text-white placeholder:text-white/30 resize-none transition-all duration-150"
                 />
               </div>
 

@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://protfolio-kohl-sigma.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://seif-eldin-dev.vercel.app";
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {

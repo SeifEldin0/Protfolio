@@ -97,7 +97,7 @@ const Projects = () => {
           <div className="inline-flex p-1 rounded-xl bg-white/[0.04] border border-white/[0.08] mt-6 sm:mt-8">
             <button
               onClick={() => setActiveTab("featured")}
-              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] ${
+              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] focus-visible:ring-2 focus-visible:ring-[#708f96] outline-none ${
                 activeTab === "featured"
                   ? "bg-white/[0.1] text-white shadow-sm"
                   : "text-white/60 hover:text-white"
@@ -107,7 +107,7 @@ const Projects = () => {
             </button>
             <button
               onClick={() => setActiveTab("all")}
-              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] ${
+              className={`px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 min-h-[40px] focus-visible:ring-2 focus-visible:ring-[#708f96] outline-none ${
                 activeTab === "all"
                   ? "bg-white/[0.1] text-white shadow-sm"
                   : "text-white/60 hover:text-white"

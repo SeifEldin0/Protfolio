@@ -1,7 +1,8 @@
-import { Outfit, Ovo, Exo_2, Cairo } from "next/font/google";
+import { Outfit, Exo_2, Cairo } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = "https://seif-eldin-dev.vercel.app";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://seif-eldin-dev.vercel.app";
 const siteName = "Seif Eldin Portfolio";
 const siteTitle = "Seif Eldin | Full-Stack Web & Mobile Developer";
 const siteDescription =
@@ -11,13 +12,6 @@ const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-outfit",
-  display: "swap",
-});
-
-const ovo = Ovo({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-ovo",
   display: "swap",
 });
 
@@ -34,6 +28,13 @@ const cairo = Cairo({
   variable: "--font-cairo",
   display: "swap",
 });
+
+export const viewport = {
+  themeColor: "#0a0a0b",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -167,11 +168,32 @@ export const metadata = {
     "web developer",
     "web development",
     "Flutter Developer",
-    "",
-    "",
-    "",
-    "",
-    "full stack dev",
+
+    "Seif Eldin",
+    "Seif Eldin Mostafa",
+    "Seif Mostafa",
+    "Full-Stack Web Developer",
+    "Software Engineer",
+    "Laravel Developer",
+    "Next.js Developer",
+    "React Developer",
+    "PHP Developer",
+    "REST API Engineering",
+    "ERP Developer",
+    "E-commerce Developer",
+    "Filament Developer",
+    "TypeScript Developer",
+    "PostgreSQL",
+    "MySQL",
+    "Web Application Architecture",
+    "Full Stack Developer Egypt",
+    "Freelance Software Engineer",
+    "سيف الدين",
+    "سيف الدين مصطفى",
+    "مهندس برمجيات",
+    "software engineer",
+    "web developer",
+    "full stack developer",
     "full stack web developer",
     "freelancer",
     "freelance web developer",
@@ -349,7 +371,7 @@ export const metadata = {
         url: `${siteUrl}/profile-img.jpg`,
         width: 1200,
         height: 630,
-        alt: "Seif Aldin - Full-Stack Web & Mobile Developer Portfolio",
+        alt: "Seif Eldin - Full-Stack Web & Mobile Developer Portfolio",
         type: "image/jpeg",
       },
     ],
@@ -377,11 +399,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // Comprehensive Schema.org structured data
+  // Comprehensive Schema.org structured data including Person, Service, and FAQPage
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      // Person Schema - Your Profile
+      // Person Schema
       {
         "@type": "Person",
         "@id": `${siteUrl}/#person`,
@@ -389,15 +411,13 @@ export default function RootLayout({ children }) {
         alternateName: [
           "sefoo",
           "seif eldin",
-          "Seif Eldin",
           "Seif Eldin Mostafa",
-          "Seif Eldin",
           "سيف الدين",
           "Seif Mostafa",
           "سيف الدين مصطفى",
         ],
         givenName: "Seif",
-        familyName: "Aldin",
+        familyName: "Eldin",
         jobTitle: "Full-Stack Software Developer (Web & Mobile)",
         description: siteDescription,
         url: siteUrl,
@@ -407,7 +427,7 @@ export default function RootLayout({ children }) {
           width: 400,
           height: 400,
         },
-        email: "mailto:contact@seif-aldin-dev.vercel.app",
+        email: "mailto:seifeldinmostafa515@gmail.com",
         sameAs: [
           "https://www.linkedin.com/in/saif-eldin-mostafa-654585316",
           "https://github.com/SeifEldin0",
@@ -473,7 +493,7 @@ export default function RootLayout({ children }) {
       {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}/#service`,
-        name: "Seif Aldin - Software Engineering Services",
+        name: "Seif Eldin - Software Engineering Services",
         description:
           "Professional software engineering services including full-stack web and mobile application development, Laravel backends, REST APIs, testing & QA, and SEO/GEO/AEO optimization.",
         provider: { "@id": `${siteUrl}/#person` },
@@ -528,6 +548,61 @@ export default function RootLayout({ children }) {
           ],
         },
       },
+      // FAQPage Schema for Rich Snippets
+      {
+        "@type": "FAQPage",
+        "@id": `${siteUrl}/#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What core technologies do you use for full-stack software development?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "My primary production stack is Laravel (PHP) for robust backend business logic and REST APIs, paired with React.js and Next.js for high-performance frontend interfaces. I also utilize PostgreSQL/MySQL for relational databases, Redis for caching/locking, and Python/FastAPI for AI microservices.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you build both frontend user interfaces and backend architectures?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. I architect and implement the complete stack: relational database schemas, secure authentication/authorization, RESTful API endpoints, and modern, responsive frontend views optimized for both mobile and desktop screens.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can you develop custom REST APIs and business systems with Laravel?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. I build modular Laravel architectures utilizing Repository and Service patterns, dedicated FormRequest validation classes, Eloquent API Resources, and Spatie Role-Based Access Control (RBAC).",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you build custom e-commerce and ERP systems?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. I have engineered custom e-commerce systems with atomic inventory checkout, multi-vendor support, and payment webhooks, as well as operational ERP platforms managing multi-entity workflows, schedules, and inventory.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you provide application testing, QA, and bug fixing for existing systems?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Software reliability is a core deliverable. I write automated PHPUnit feature tests, execute API contract testing with Postman, conduct cross-device mobile QA, and systematically debug and resolve N+1 queries, race conditions, and legacy application bugs.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What is your approach to Technical SEO, GEO, and Answer Engine Optimization (AEO)?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "I build search discoverability into the code architecture: valid HTML5 semantics, comprehensive Schema.org JSON-LD microdata, automated sitemaps, fast Core Web Vitals, and structured question-answer entities that generative AI systems can cite directly.",
+            },
+          },
+        ],
+      },
       // BreadcrumbList Schema
       {
         "@type": "BreadcrumbList",
@@ -560,36 +635,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Primary Meta Tags */}
-        <meta name="theme-color" content="#0a0a0b" />
-        <meta name="color-scheme" content="dark" />
-        <meta name="msapplication-TileColor" content="#0a0a0b" />
-
-        {/* Preconnect for Performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-        {/* Geo Tags for Local SEO */}
         <meta name="geo.region" content="EG" />
         <meta name="geo.placename" content="Egypt" />
-
-        {/* Language */}
-        <meta httpEquiv="content-language" content="en, ar" />
       </head>
       <body
-        className={`${outfit.variable} ${ovo.variable} ${exo.variable} ${cairo.variable} antialiased`}>
+        className={`${outfit.variable} ${exo.variable} ${cairo.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

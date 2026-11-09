@@ -144,6 +144,7 @@ const Header = () => {
                   alt="Seif Aldin - Full-Stack Web & Mobile Developer"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
                   priority
                 />
               </div>

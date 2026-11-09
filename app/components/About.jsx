@@ -447,7 +447,7 @@ const About = () => {
                   src={assets.user_image}
                   alt="Seif Aldin - Full-Stack Software Developer"
                   fill
-                  priority
+                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                   className="object-cover object-top"
                 />

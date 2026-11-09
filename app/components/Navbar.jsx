@@ -124,9 +124,9 @@ const Navbar = () => {
               <Image
                 src={assets.logo}
                 alt="Seif logo"
-                width={100}
-                height={120}
-                className=""
+                width={36}
+                height={36}
+                className="w-8 h-8 sm:w-9 sm:h-9 object-contain"
                 priority
               />
             <span className="hidden sm:block text-base font-medium font-logo">
@@ -144,7 +144,7 @@ const Navbar = () => {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-150 ${
-                  activeSection === link.href.slice(1)
+                  activeSection === link.href.split("#")[1]
                     ? "text-white bg-white/[0.08]"
                     : "text-white/70 hover:text-white"
                 }`}
@@ -199,7 +199,7 @@ const Navbar = () => {
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={`mobile-link text-2xl font-semibold tracking-tight transition-all duration-200 ${
-                activeSection === link.href.slice(1) 
+                activeSection === link.href.split("#")[1] 
                   ? "text-gradient scale-105" 
                   : "text-white/60 active:text-white"
               }`}

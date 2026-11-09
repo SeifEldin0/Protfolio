@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import projects from "@/data/projects.json";
 
-const siteUrl = "https://seif-aldin-dev.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://seif-eldin-dev.vercel.app";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
