@@ -141,7 +141,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
-          <p>© {currentYear} Seif Aldin Mostafa. All rights reserved.</p>
+          <p>© {currentYear} Seif Eldin Mostafa. All rights reserved.</p>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
             <span className="text-emerald-400 font-medium">Available for work</span>

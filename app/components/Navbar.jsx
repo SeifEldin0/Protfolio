@@ -131,7 +131,7 @@ const Navbar = () => {
               />
             <span className="hidden sm:block text-base font-medium font-logo">
               <span className="text-white">Seif</span>
-              <span className="text-white/40">.dev</span>
+              <span className="text-[#708f96]">.dev</span>
             </span>
           </a>
 

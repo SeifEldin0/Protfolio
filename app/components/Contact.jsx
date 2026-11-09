@@ -217,7 +217,7 @@ const Contact = () => {
                   {method.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[10px] text-white/50 uppercase tracking-wider font-semibold">{method.label}</span>
+                  <span className="text-[10px] text-white/70 uppercase tracking-wider font-semibold">{method.label}</span>
                   <p className="text-sm text-white/90 truncate">{method.value}</p>
                 </div>
                 <svg className="w-4 h-4 text-white/30 group-hover:text-white/70 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">

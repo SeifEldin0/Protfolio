@@ -503,7 +503,7 @@ const About = () => {
 
             {/* Skills Grid */}
             <div className="skills-grid mt-4 space-y-3">
-              <h4 className="text-xs uppercase tracking-wider text-white/50 mb-1 font-semibold">
+              <h4 className="text-xs uppercase tracking-wider text-white/75 mb-1 font-semibold">
                 Technical Stack & Capabilities
               </h4>
               <div className="space-y-2.5">
@@ -573,11 +573,11 @@ const About = () => {
                         <h4 className="text-xs sm:text-sm font-semibold text-white truncate">
                           {phase.title}
                         </h4>
-                        <span className="text-[10px] text-white/40 font-mono">
+                        <span className="text-[10px] text-white/75 font-mono">
                           {phase.badge}
                         </span>
                       </div>
-                      <p className="text-[11px] text-white/55 truncate mt-0.5">
+                      <p className="text-[11px] text-white/75 truncate mt-0.5">
                         {phase.tagline}
                       </p>
                     </div>
@@ -606,7 +606,7 @@ const About = () => {
                 >
                   <span>{phase.title}</span>
                   <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
-                    isActive ? "bg-[#708f96] text-black font-semibold" : "bg-white/[0.06] text-white/50"
+                    isActive ? "bg-[#708f96] text-black font-semibold" : "bg-white/[0.06] text-white/75"
                   }`}>
                     {phase.badge.replace(" Services", "")}
                   </span>
@@ -628,7 +628,7 @@ const About = () => {
                     <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#708f96] group-hover:text-[#aa895f] group-hover:border-[#708f96]/40 group-hover:bg-[#708f96]/10 transition-all duration-300 shrink-0">
                       {service.icon}
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium tracking-wide text-white/50 bg-white/[0.03] border border-white/[0.06] group-hover:border-[#708f96]/30 group-hover:text-white/80 transition-colors">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium tracking-wide text-white/75 bg-white/[0.04] border border-white/[0.08] group-hover:border-[#708f96]/30 group-hover:text-white transition-colors">
                       {service.phaseBadge}
                     </span>
                   </div>
@@ -664,7 +664,7 @@ const About = () => {
                     </span>
                     <a
                       href="#contact"
-                      className="text-white/50 group-hover:text-white font-medium flex items-center gap-1 transition-colors"
+                      className="text-white/75 group-hover:text-white font-medium flex items-center gap-1 transition-colors"
                     >
                       Consultation <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                     </a>

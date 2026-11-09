@@ -201,9 +201,11 @@ const Projects = () => {
                 <div className="pt-3 border-t border-white/[0.06] flex items-center justify-between gap-2">
                   <Link
                     href={`/projects/${project.slug}`}
+                    aria-label={`View ${project.title} architecture and case study`}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-white/90 hover:text-white group-hover:text-[#708f96] transition-colors min-h-[36px]"
                   >
                     <span>Architecture & Case Study</span>
+                    <span className="sr-only">for {project.title}</span>
                     <svg
                       className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"
                       fill="none"
@@ -224,10 +226,12 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-medium text-white/60 hover:text-white transition-colors min-h-[36px]"
-                      title="Open Live Application"
+                      aria-label={`Open live application for ${project.title}`}
+                      className="inline-flex items-center gap-1 text-[11px] font-medium text-white/75 hover:text-white transition-colors min-h-[36px]"
+                      title={`Open Live Application for ${project.title}`}
                     >
                       <span>Live</span>
+                      <span className="sr-only">demo for {project.title}</span>
                       <svg
                         className="w-3 h-3"
                         fill="none"

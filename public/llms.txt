@@ -1,0 +1,26 @@
+# Seif Eldin - Full-Stack Software Developer
+
+> Full-Stack Software Developer specializing in Laravel, PHP, React.js, Next.js, REST APIs, ERP systems, and cloud web applications.
+
+## About
+Seif Eldin is a Full-Stack Software Developer based in Egypt, architecting scalable enterprise web applications, high-performance REST APIs, database schemas, and modern responsive user interfaces.
+
+## Primary Skills
+- **Backend & APIs**: Laravel 11, PHP 8.x, REST API Architecture, Repository & Service Patterns, Spatie RBAC, FormRequest validation, Eloquent API Resources.
+- **Frontend & UI**: Next.js (App Router), React 19, TypeScript, JavaScript (ES6+), Tailwind CSS, Framer Motion, GSAP.
+- **Databases & Caching**: PostgreSQL, MySQL, Redis.
+- **Architectures**: Microservices, AI/LLM Integration (FastAPI, Google Gemini API, OpenAI), Real-time WebSockets (Socket.IO).
+- **Quality & Reliability**: PHPUnit automated testing, API contract verification, regression testing, bug remediation.
+- **Discoverability & Optimization**: Technical SEO, Schema.org JSON-LD microdata, Core Web Vitals optimization, GEO & AEO (Generative / Answer Engine Optimization).
+
+## Featured Systems & Projects
+- **LMS Mastery Platform**: Comprehensive enterprise Learning Management System built with Laravel, MySQL, REST APIs, and Blade/Tailwind. Features student enrollments, exam grading, video course hosting, and role-based permissions.
+- **Hybrid IDS (Intrusion Detection System)**: AI/ML security analytics dashboard combining Python/FastAPI backend with Next.js interactive frontend for real-time network anomaly detection.
+- **MOU Store**: Multi-vendor e-commerce platform with automated inventory tracking, checkout pipelines, and Stripe/PayPal payment integrations.
+- **Restaurant Management & POS**: Operational restaurant ERP with order scheduling, kitchen display systems, and inventory controls.
+
+## Contact & Links
+- Website: https://seif-eldin-dev.vercel.app
+- Email: seifeldinmostafa515@gmail.com
+- GitHub: https://github.com/SeifEldin0
+- LinkedIn: https://www.linkedin.com/in/saif-eldin-mostafa-654585316
