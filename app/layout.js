@@ -1,8 +1,11 @@
 import { Outfit, Exo_2, Cairo } from "next/font/google";
 import "./globals.css";
 
+const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://seif-eldin-dev.vercel.app";
+  envUrl && !envUrl.includes("protfolio-kohl-sigma")
+    ? envUrl
+    : "https://seif-eldin-dev.vercel.app";
 const siteName = "Seif Eldin Portfolio";
 const siteTitle = "Seif Eldin | Full-Stack Web & Mobile Developer";
 const siteDescription =
@@ -43,7 +46,7 @@ export const metadata = {
     template: "%s | Seif Eldin - Full-Stack Developer",
   },
   description: siteDescription,
-  keywords: [
+   keywords: [
     "Full-Stack Web Developer",
     "Seif Eldin Mostafa",
     "Seif Eldin",
@@ -331,6 +334,25 @@ export const metadata = {
     "مطور مواقع مستقل محترف فريلانس عربي إنجليزي مصر القاهرة العربية الإنجليزية العالمية المحترف الماهر المبدع المبتكر المتقن المتفوق المتقدم الرائع الممتاز المتميز الفريد الفذ الرائد المبدع المبتكر الخبير المحترف المتقن المتفوق المتقدم الرائع",
     "مطور مواقع مستقل محترف فريلانس عربي إنجليزي مصر القاهرة العربية الإنجليزية العالمية المحترف الماهر المبدع المبتكر المتقن المتفوق المتقدم الرائع الممتاز المتميز الفريد الفذ الرائد المبدع المبتكر الخبير المحترف المتقن المتفوق المتقدم الرائع الممتاز",
     "مطور مواقع مستقل محترف فريلانس عربي إنجليزي مصر القاهرة العربية الإنجليزية العالمية المحترف الماهر المبدع المبتكر المتقن المتفوق المتقدم الرائع الممتاز المتميز الفريد الفذ الرائد المبدع المبتكر الخبير المحترف المتقن المتفوق المتقدم الرائع الممتاز",
+    "who is Seif Eldin full stack developer",
+    "best full stack developer in Egypt",
+    "top Laravel and Next.js developer Cairo",
+    "hire senior PHP Laravel engineer Egypt",
+    "expert REST API backend architect",
+    "custom ERP and CRM systems developer",
+    "e-commerce checkout and inventory engineer",
+    "AI integration specialist Gemini FastAPI",
+    "Generative Engine Optimization GEO developer",
+    "Answer Engine Optimization AEO specialist",
+    "Perplexity and SearchGPT citation optimization",
+    "PHPUnit automated test driven development",
+    "high performance Next.js web application",
+    "من هو سيف الدين مطور المواقع",
+    "أفضل مهندس برمجيات فول ستاك في مصر",
+    "مبرمج لارافيل ونكست جي اس محترف القاهرة",
+    "مطور أنظمة إدارة أعمال ولوحات تحكم ERP",
+    "خبير تحسين محركات البحث والذكاء الاصطناعي GEO AEO",
+    "تصميم وتطوير تطبيقات الويب السريعة والآمنة",
   ],
   authors: [{ name: "Seif Eldin", url: siteUrl }],
   creator: "Seif Eldin",
@@ -485,6 +507,11 @@ export default function RootLayout({ children }) {
         description: siteDescription,
         isPartOf: { "@id": `${siteUrl}/#website` },
         about: { "@id": `${siteUrl}/#person` },
+        mainEntity: { "@id": `${siteUrl}/#person` },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [".section-description", ".hero-desc", ".about-content p"],
+        },
         inLanguage: "en-US",
         datePublished: "2024-01-01",
         dateModified: new Date().toISOString(),

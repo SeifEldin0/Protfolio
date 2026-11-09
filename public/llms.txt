@@ -24,3 +24,7 @@ Seif Eldin is a Full-Stack Software Developer based in Egypt, architecting scala
 - Email: seifeldinmostafa515@gmail.com
 - GitHub: https://github.com/SeifEldin0
 - LinkedIn: https://www.linkedin.com/in/saif-eldin-mostafa-654585316
+
+## Full Technical Documentation
+For complete technical specifications, architecture patterns, and detailed case studies, see:
+- [Full LLM Specification](https://seif-eldin-dev.vercel.app/llms-full.txt)

@@ -3,7 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import projects from "@/data/projects.json";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://seif-eldin-dev.vercel.app";
+const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl =
+  envUrl && !envUrl.includes("protfolio-kohl-sigma")
+    ? envUrl
+    : "https://seif-eldin-dev.vercel.app";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({

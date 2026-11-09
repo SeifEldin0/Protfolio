@@ -1,7 +1,11 @@
 // app/sitemap.js
 import projects from "@/data/projects.json";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://seif-eldin-dev.vercel.app";
+const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl =
+  envUrl && !envUrl.includes("protfolio-kohl-sigma")
+    ? envUrl
+    : "https://seif-eldin-dev.vercel.app";
 
 export default function sitemap() {
   const lastModified = new Date().toISOString();
@@ -11,6 +15,12 @@ export default function sitemap() {
     lastModified,
     changeFrequency: "monthly",
     priority: project.featured ? 0.9 : 0.7,
+    alternates: {
+      languages: {
+        "en-US": `${siteUrl}/projects/${project.slug}`,
+        "ar-EG": `${siteUrl}/projects/${project.slug}`,
+      },
+    },
   }));
 
   return [
@@ -19,6 +29,12 @@ export default function sitemap() {
       lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
+      alternates: {
+        languages: {
+          "en-US": siteUrl,
+          "ar-EG": siteUrl,
+        },
+      },
     },
     ...projectRoutes,
   ];
