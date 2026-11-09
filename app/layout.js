@@ -1,7 +1,7 @@
 import { Outfit, Ovo, Exo_2, Cairo } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = "https://seif-aldin-dev.vercel.app";
+const siteUrl = "https://seif-eldin-dev.vercel.app";
 const siteName = "Seif Eldin Portfolio";
 const siteTitle = "Seif Eldin | Full-Stack Web & Mobile Developer";
 const siteDescription =
@@ -39,11 +39,27 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
-    template: "%s | Seif Aldin - Full-Stack Developer",
+    template: "%s | Seif Eldin - Full-Stack Developer",
   },
   description: siteDescription,
   keywords: [
     "Full-Stack Web Developer",
+    "Seif Eldin Mostafa",
+    "Seif Eldin",
+    "Seif Mostafa",
+    "Seif Aldin",
+    "Seif Eldin Developer",
+    "Seif Eldin Full Stack Developer",
+    "sefoo",
+    "seif eldin",
+    "Seif Eldin Developer",
+    "Seif Eldin Full Stack Developer",
+    "Seif Eldin Web Developer",
+    "Seif Eldin Software Engineer",
+    "Seif Eldin Developer",
+    "Seif Eldin Full Stack Developer",
+    "Seif Eldin Web Developer",
+    "Seif Eldin Software Engineer",
     "Laravel Developer",
     "PHP Developer",
     "React Developer",
@@ -71,6 +87,9 @@ export const metadata = {
     "seif web",
     "seif full stack developer",
     "seif website",
+    "seif flutter developer",
+    "seif mobile developer",
+    "React Native Developer",
     "web",
     "Website",
     "portfolio",
@@ -145,6 +164,13 @@ export const metadata = {
     "software developer",
     "software engineer",
     "web dev",
+    "web developer",
+    "web development",
+    "Flutter Developer",
+    "",
+    "",
+    "",
+    "",
     "full stack dev",
     "full stack web developer",
     "freelancer",
@@ -192,7 +218,10 @@ export const metadata = {
     "سيف",
     "سيف الدين مطور",
     "سيف الدين مبرمج",
-
+    "سيف الدين مهندس",
+    "سيف الدين مهندس برمجيات",
+    "سيف الدين مهندس معلومات",
+    "سيفو",
     "سيف الدين محمد",
     "محمد سيف الدين",
     "سيف الدين مصطفى",
@@ -358,6 +387,10 @@ export default function RootLayout({ children }) {
         "@id": `${siteUrl}/#person`,
         name: "Seif Eldin",
         alternateName: [
+          "sefoo",
+          "seif eldin",
+          "Seif Eldin",
+          "Seif Eldin Mostafa",
           "Seif Eldin",
           "سيف الدين",
           "Seif Mostafa",
